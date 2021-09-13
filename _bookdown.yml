@@ -1,0 +1,9 @@
+book_filename: "gis-itmo"
+rmd_files:
+    - "index.Rmd"
+    - "01-intro.Rmd"
+    - "02-basics.Rmd"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: " "
