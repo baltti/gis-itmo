@@ -1,0 +1,31 @@
+{
+    "id": "76A2E5C3",
+    "path": "D:/gis-itmo/04-data-formats.Rmd",
+    "project_path": "04-data-formats.Rmd",
+    "type": "r_markdown",
+    "hash": "3779336430",
+    "contents": "",
+    "dirty": false,
+    "created": 1632046399325.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "0",
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "rmdVisualModeLocation": "2974:1311.818115234375",
+        "cursorPosition": "99,0",
+        "scrollLine": "0",
+        "ignored_words": "Постепенно\n"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1632056336,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1632056334605,
+    "read_only": false,
+    "read_only_alternatives": []
+}

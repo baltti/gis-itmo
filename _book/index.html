@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Геоинформатика и геоинформационные системы</title>
   <meta name="description" content="Геоинформатика и геоинформационные системы" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Геоинформатика и геоинформационные системы" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-09-14" />
+<meta name="date" content="2021-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 
 <link rel="next" href="intro.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -96,6 +96,21 @@
 <li class="chapter" data-level="3.4.6" data-path="basics.html"><a href="basics.html#легенда"><i class="fa fa-check"></i><b>3.4.6</b> Легенда</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -119,7 +134,7 @@
 <div id="header">
 <h1 class="title">Геоинформатика и геоинформационные системы</h1>
 <p class="author"><em>Балтыжакова Татьяна</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-09-14</em></p>
+<p class="date"><em>2021-09-19</em></p>
 </div>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number"> 1</span> Общие сведения</h1>
@@ -138,7 +153,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -178,6 +192,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

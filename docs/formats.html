@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2021-09-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="crs.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Геоинформатика и геоинформационные системы</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#добавление-объектов-на-карту"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#добавление-подложки"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#настройка-карты"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#настройка-стиля"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#оформление-карты"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+<li class="chapter" data-level="3.4.3" data-path="basics.html"><a href="basics.html#параметры-листа"><i class="fa fa-check"></i><b>3.4.3</b> Параметры листа</a></li>
+<li class="chapter" data-level="3.4.4" data-path="basics.html"><a href="basics.html#добавление-карты"><i class="fa fa-check"></i><b>3.4.4</b> Добавление карты</a></li>
+<li class="chapter" data-level="3.4.5" data-path="basics.html"><a href="basics.html#масштабная-линейка"><i class="fa fa-check"></i><b>3.4.5</b> Масштабная линейка</a></li>
+<li class="chapter" data-level="3.4.6" data-path="basics.html"><a href="basics.html#легенда"><i class="fa fa-check"></i><b>3.4.6</b> Легенда</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Геоинформатика и геоинформационные системы</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="formats" class="section level1" number="5">
+<h1><span class="header-section-number"> 5</span> Форматы данных, используемые в ГИС</h1>
+<p>Основные типы данных, используемые в геоинформационных системах - растровые и векторные данные.</p>
+<p><strong>Растровые данные</strong> - это матрица или сетка, в каждой ячейке (пикселе) которой содержится числовое значение. В качестве растровых данных могут быть использованы цифровые изображения или значения непрерывных величин (например, рельеф).</p>
+<p>В <strong>векторных данных</strong> местоположение объектов задается с помощью координат и математических формул. В геоинформационных системах используются специализированные форматы векторных данных, позволяющие хранить как информацию о местоположении объектов, так и их атрибутивные (непространственные) характеристики.</p>
+<div id="shape-файлы" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Shape файлы</h2>
+<p>Основным форматом векторных данных в ГИС является shapefile<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Этот проприетарный формат данных от компании ESRI, который был разработан ими в 90-х годах прошлого века. При использовании этого формата данные хранятся в нескольких файлах с разными расширениями, обязательными из которых являются:</p>
+<p>- .shp - геометрия объектов;</p>
+<p>- .shx - файл индексов необходим для ускорения расчетов и связи геометрии и атрибутов;</p>
+<p>- .dbf - таблица атрибутов:</p>
+<p>- .prj - сведения о проекции и системе координат.</p>
+<p>Без перечисленных выше файлов данные не будут корректно открываться и обрабатываться в ГИС.</p>
+<p>Недостатки работы с shape файлами<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>:</p>
+<ul>
+<li><p>в файле не задается система координат;</p></li>
+<li><p>состоит из нескольких файлов;</p></li>
+<li><p>названия атрибутов должны быть не длинее 10 букв;</p></li>
+<li><p>всего можно добавить не более 255 атрибутов;</p></li>
+<li><p>ограниченное количество типов данных в атрибутах;</p></li>
+<li><p>файл должен быть не более 2 Гигабайт;</p></li>
+<li><p>не описываются топологические отношения объектов;</p></li>
+<li><p>в файле могут быть только объекты с одним типом геометрии;</p></li>
+<li><p>и прочие.</p></li>
+</ul>
+</div>
+<div id="geojson" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Geojson</h2>
+<p>Постепенно на замену shapefile приходят другие форматы данных, например, GeoJSON - формат представления различных структур географических данных, основанный на <a href="https://ru.wikipedia.org/wiki/JSON">JavaScript object notation (JSON)</a>.</p>
+<p>В GeoJSON объект состоит из набора пар ключ/значение, также называемых свойствами. Имя каждого свойства – строка. Значение свойства может представлять собой строку, число, объект, массив или один из литералов: «true», «false» и «null». Массив состоит из элементов, где каждый элемент может принимать одно из значений, описанных выше.</p>
+<p>Пример GeoJSON:</p>
+<pre><code>{
+  &quot;type&quot;: &quot;Feature&quot;,
+  &quot;geometry&quot;: {
+    &quot;type&quot;: &quot;Point&quot;,
+    &quot;coordinates&quot;: [125.6, 10.1]
+  },
+  &quot;properties&quot;: {
+    &quot;name&quot;: &quot;Dinagat Islands&quot;
+  }
+}</code></pre>
+<p>Формат поддерживает следующие типы объектов <code>Point</code>, <code>LineString</code>, <code>Polygon</code>, <code>MultiPoint</code>, <code>MultiLineString</code>, and <code>MultiPolygon</code>.</p>
+<p>Геометрические объекты с атрибутивными характеристиками составляют <code>Feature</code> объекты. Наборы объектов хранятся как <code>FeatureCollection</code> объекты<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.
+Полное описание формата представлено <a href="https://datatracker.ietf.org/doc/html/rfc7946">здесь</a>.</p>
+<p>Для проверки и валидации geojson файлов можно пользоваться сервисом <a href="https://geojson.io/">geojson.io</a></p>
+</div>
+<div id="geopackage" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Geopackage</h2>
+<p>Также все более широкое распространение получает формат GeoPackage, который фактически является файлом SQL-базы данных с расширением .gpkg<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
+<p><img src="images/prefer-geopackage.png" width="395" /></p>
+<p>GeoPackage - это контейнер SQLite, а стандарт кодирования GeoPackage определяет правила и требования к контенту, хранящемуся в контейнере.</p>
+<p>Стандарт GeoPackage определяет схему, включая определения таблиц, утверждения целостности, ограничения формата и ограничения содержимого. Требуемый и поддерживаемый контент GeoPackage полностью определен в стандарте. Эти возможности построены на общей основе, и механизм расширения предоставляет разработчикам возможность включить дополнительные функции в свои GeoPackages.</p>
+<p>Стандарт кодирования GeoPackage описывает набор соглашений для хранения следующего в базе данных SQLite:</p>
+<ul>
+<li><p>векторные объекты;</p></li>
+<li><p>наборы тайловых матриц изображений и растровых карт в различных масштабах;</p></li>
+<li><p>атрибуты (непространственные данные);</p></li>
+<li><p>расширения.</p></li>
+</ul>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>ESRI Shapefile Technical Description — Электрон. дан. — <a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf" class="uri">https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf</a><a href="formats.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Switch from Shapefile <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a><a href="formats.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p><a href="https://geojson.org/" class="uri">https://geojson.org/</a><a href="formats.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a><a href="formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="crs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

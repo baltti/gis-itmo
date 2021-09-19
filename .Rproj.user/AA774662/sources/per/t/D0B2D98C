@@ -1,0 +1,30 @@
+{
+    "id": "D0B2D98C",
+    "path": "D:/gis-itmo/02-basics.Rmd",
+    "project_path": "02-basics.Rmd",
+    "type": "r_markdown",
+    "hash": "2571885768",
+    "contents": "",
+    "dirty": false,
+    "created": 1632049503836.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "0",
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "rmdVisualModeLocation": "1350:2177.272705078125",
+        "cursorPosition": "36,184",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1632049754,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1632049752254,
+    "read_only": false,
+    "read_only_alternatives": []
+}
