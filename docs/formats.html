@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-09-19" />
+<meta name="date" content="2021-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,13 +173,13 @@
   }
 }</code></pre>
 <p>Формат поддерживает следующие типы объектов <code>Point</code>, <code>LineString</code>, <code>Polygon</code>, <code>MultiPoint</code>, <code>MultiLineString</code>, and <code>MultiPolygon</code>.</p>
-<p>Геометрические объекты с атрибутивными характеристиками составляют <code>Feature</code> объекты. Наборы объектов хранятся как <code>FeatureCollection</code> объекты<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.
-Полное описание формата представлено <a href="https://datatracker.ietf.org/doc/html/rfc7946">здесь</a>.</p>
+<p>Геометрические объекты с атрибутивными характеристиками составляют <code>Feature</code> объекты. Наборы объектов хранятся как <code>FeatureCollection</code> объекты<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>. Полное описание формата представлено <a href="https://datatracker.ietf.org/doc/html/rfc7946">здесь</a>.</p>
 <p>Для проверки и валидации geojson файлов можно пользоваться сервисом <a href="https://geojson.io/">geojson.io</a></p>
+<p>Существует еще дополненная версия topojson, в котором учитываются топологические отношения между объектами. В этом формате вместо того, чтобы представлять геометрию дискретно, геометрия в файлах TopoJSON сшивается из общих линейных сегментов, называемых <em>дугами</em><a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
 </div>
 <div id="geopackage" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Geopackage</h2>
-<p>Также все более широкое распространение получает формат GeoPackage, который фактически является файлом SQL-базы данных с расширением .gpkg<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
+<p>Также все более широкое распространение получает формат GeoPackage, который фактически является файлом SQL-базы данных с расширением .gpkg<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>.</p>
 <p><img src="images/prefer-geopackage.png" width="395" /></p>
 <p>GeoPackage - это контейнер SQLite, а стандарт кодирования GeoPackage определяет правила и требования к контенту, хранящемуся в контейнере.</p>
 <p>Стандарт GeoPackage определяет схему, включая определения таблиц, утверждения целостности, ограничения формата и ограничения содержимого. Требуемый и поддерживаемый контент GeoPackage полностью определен в стандарте. Эти возможности построены на общей основе, и механизм расширения предоставляет разработчикам возможность включить дополнительные функции в свои GeoPackages.</p>
@@ -188,11 +188,13 @@
 <li><p>векторные объекты;</p></li>
 <li><p>наборы тайловых матриц изображений и растровых карт в различных масштабах;</p></li>
 <li><p>атрибуты (непространственные данные);</p></li>
-<li><p>расширения.</p></li>
+<li><p>дополнения.</p></li>
 </ul>
+<p>Вот здесь еще можно посмотреть презентацию про shape файлы и их альтернативы <a href="https://www.slideshare.net/jachym/switch-from-shapefile" class="uri">https://www.slideshare.net/jachym/switch-from-shapefile</a></p>
 
 </div>
 </div>
+
 
 
 
@@ -213,7 +215,8 @@
 <li id="fn6"><p>ESRI Shapefile Technical Description — Электрон. дан. — <a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf" class="uri">https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf</a><a href="formats.html#fnref6" class="footnote-back">↩︎</a></p></li>
 <li id="fn7"><p>Switch from Shapefile <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a><a href="formats.html#fnref7" class="footnote-back">↩︎</a></p></li>
 <li id="fn8"><p><a href="https://geojson.org/" class="uri">https://geojson.org/</a><a href="formats.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a><a href="formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p><a href="https://github.com/topojson/topojson" class="uri">https://github.com/topojson/topojson</a><a href="formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a><a href="formats.html#fnref10" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
