@@ -25,3 +25,6 @@ formats
 shape-файлы
 geojson
 geopackage
+osm
+сервис-overpass-turbo
+styles-import
