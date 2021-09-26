@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-09-20" />
+<meta name="date" content="2021-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="crs.html"/>
-
+<link rel="next" href="osm.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -111,6 +111,11 @@
 <li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
 <li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -191,24 +196,10 @@
 <li><p>дополнения.</p></li>
 </ul>
 <p>Вот здесь еще можно посмотреть презентацию про shape файлы и их альтернативы <a href="https://www.slideshare.net/jachym/switch-from-shapefile" class="uri">https://www.slideshare.net/jachym/switch-from-shapefile</a></p>
+<p>Кроме этих форматов в ГИС также могут использоваться и некоторые другие, например, <strong>GPX</strong> (формат обмена данными GPS)<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>, <strong>KML</strong><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> (формат файлов, который используется для отображения географических данных в геобраузерах, таких как Google Планета Земля, Google Карты и Google Карты для мобильных устройств; создан на основе стандарта XML).</p>
 
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
 <ol start="6">
@@ -217,6 +208,8 @@
 <li id="fn8"><p><a href="https://geojson.org/" class="uri">https://geojson.org/</a><a href="formats.html#fnref8" class="footnote-back">↩︎</a></p></li>
 <li id="fn9"><p><a href="https://github.com/topojson/topojson" class="uri">https://github.com/topojson/topojson</a><a href="formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
 <li id="fn10"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a><a href="formats.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>GPX: the GPS Exchange Format <a href="https://www.topografix.com/gpx.asp" class="uri">https://www.topografix.com/gpx.asp</a><a href="formats.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>Руководство по KML <a href="https://developers.google.com/kml/documentation/kml_tut?hl=ru" class="uri">https://developers.google.com/kml/documentation/kml_tut?hl=ru</a><a href="formats.html#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -224,8 +217,8 @@
           </div>
         </div>
       </div>
-<a href="crs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="crs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="osm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
