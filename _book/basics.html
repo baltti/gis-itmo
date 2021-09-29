@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-09-26" />
+<meta name="date" content="2021-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -84,7 +84,7 @@
 <li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#добавление-подложки"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
 <li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#настройка-карты"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#настройка-стиля"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#оформление-карты"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
 <ul>
@@ -116,6 +116,25 @@
 <li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
+<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
+<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
+<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#буферные-зоны"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
+<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
+<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#построение-сетки"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
+<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -194,7 +213,7 @@
 <blockquote>
 <p>Важно помнить, что перепроецировании на лету не изменяются системы координат слоев, меняется только их отображение на экране.</p>
 </blockquote>
-<div id="настройка-стиля" class="section level3" number="3.3.1">
+<div id="style-basics" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Настройка стиля</h3>
 <p>Настроим стиль слоя. Для этого нужно открыть окно настроек либо двойным кликом левой кнопки мыши по названию слоя, либо в контекстном меню (открывается кликом правой кнопки мыши по названию слоя) <em>Свойства</em>.</p>
 <p><img src="images/12.PNG" /></p>

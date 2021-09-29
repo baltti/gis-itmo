@@ -7,6 +7,7 @@ rmd_files:
     - "04-data-formats.Rmd"
     - "05-osm.Rmd"
     - "06-styles.Rmd"
+    - "07-spatial-analysis-basics.Rmd"
 delete_merged_file: true
 language:
   ui:
