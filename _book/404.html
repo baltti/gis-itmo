@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы</title>
-  <meta name="description" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  <title>Page not found | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content="Page not found | Геоинформатика и геоинформационные системы" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  <meta property="og:title" content="Page not found | Геоинформатика и геоинформационные системы" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 5 Форматы данных, используемые в ГИС | Геоинформатика и геоинформационные системы" />
+  <meta name="twitter:title" content="Page not found | Геоинформатика и геоинформационные системы" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="crs.html"/>
-<link rel="next" href="osm.html"/>
+
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -166,89 +166,19 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="formats" class="section level1" number="5">
-<h1><span class="header-section-number"> 5</span> Форматы данных, используемые в ГИС</h1>
-<p>Основные типы данных, используемые в геоинформационных системах - растровые и векторные данные.</p>
-<p><strong>Растровые данные</strong> - это матрица или сетка, в каждой ячейке (пикселе) которой содержится числовое значение. В качестве растровых данных могут быть использованы цифровые изображения или значения непрерывных величин (например, рельеф).</p>
-<p>В <strong>векторных данных</strong> местоположение объектов задается с помощью координат и математических формул. В геоинформационных системах используются специализированные форматы векторных данных, позволяющие хранить как информацию о местоположении объектов, так и их атрибутивные (непространственные) характеристики.</p>
-<div id="shape-файлы" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Shape файлы</h2>
-<p>Основным форматом векторных данных в ГИС является shapefile<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Этот проприетарный формат данных от компании ESRI, который был разработан ими в 90-х годах прошлого века. При использовании этого формата данные хранятся в нескольких файлах с разными расширениями, обязательными из которых являются:</p>
-<p>- .shp - геометрия объектов;</p>
-<p>- .shx - файл индексов необходим для ускорения расчетов и связи геометрии и атрибутов;</p>
-<p>- .dbf - таблица атрибутов:</p>
-<p>- .prj - сведения о проекции и системе координат.</p>
-<p>Без перечисленных выше файлов данные не будут корректно открываться и обрабатываться в ГИС.</p>
-<p>Недостатки работы с shape файлами<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>:</p>
-<ul>
-<li><p>в файле не задается система координат;</p></li>
-<li><p>состоит из нескольких файлов;</p></li>
-<li><p>названия атрибутов должны быть не длинее 10 букв;</p></li>
-<li><p>всего можно добавить не более 255 атрибутов;</p></li>
-<li><p>ограниченное количество типов данных в атрибутах;</p></li>
-<li><p>файл должен быть не более 2 Гигабайт;</p></li>
-<li><p>не описываются топологические отношения объектов;</p></li>
-<li><p>в файле могут быть только объекты с одним типом геометрии;</p></li>
-<li><p>и прочие.</p></li>
-</ul>
-</div>
-<div id="geojson" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Geojson</h2>
-<p>Постепенно на замену shapefile приходят другие форматы данных, например, GeoJSON - формат представления различных структур географических данных, основанный на <a href="https://ru.wikipedia.org/wiki/JSON">JavaScript object notation (JSON)</a>.</p>
-<p>В GeoJSON объект состоит из набора пар ключ/значение, также называемых свойствами. Имя каждого свойства – строка. Значение свойства может представлять собой строку, число, объект, массив или один из литералов: «true», «false» и «null». Массив состоит из элементов, где каждый элемент может принимать одно из значений, описанных выше.</p>
-<p>Пример GeoJSON:</p>
-<pre><code>{
-  &quot;type&quot;: &quot;Feature&quot;,
-  &quot;geometry&quot;: {
-    &quot;type&quot;: &quot;Point&quot;,
-    &quot;coordinates&quot;: [125.6, 10.1]
-  },
-  &quot;properties&quot;: {
-    &quot;name&quot;: &quot;Dinagat Islands&quot;
-  }
-}</code></pre>
-<p>Формат поддерживает следующие типы объектов <code>Point</code>, <code>LineString</code>, <code>Polygon</code>, <code>MultiPoint</code>, <code>MultiLineString</code>, and <code>MultiPolygon</code>.</p>
-<p>Геометрические объекты с атрибутивными характеристиками составляют <code>Feature</code> объекты. Наборы объектов хранятся как <code>FeatureCollection</code> объекты<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>. Полное описание формата представлено <a href="https://datatracker.ietf.org/doc/html/rfc7946">здесь</a>.</p>
-<p>Для проверки и валидации geojson файлов можно пользоваться сервисом <a href="https://geojson.io/">geojson.io</a></p>
-<p>Существует еще дополненная версия topojson, в котором учитываются топологические отношения между объектами. В этом формате вместо того, чтобы представлять геометрию дискретно, геометрия в файлах TopoJSON сшивается из общих линейных сегментов, называемых <em>дугами</em><a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
-</div>
-<div id="geopackage" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Geopackage</h2>
-<p>Также все более широкое распространение получает формат GeoPackage, который фактически является файлом SQL-базы данных с расширением .gpkg<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>.</p>
-<p><img src="images/prefer-geopackage.png" width="395" /></p>
-<p>GeoPackage - это контейнер SQLite, а стандарт кодирования GeoPackage определяет правила и требования к контенту, хранящемуся в контейнере.</p>
-<p>Стандарт GeoPackage определяет схему, включая определения таблиц, утверждения целостности, ограничения формата и ограничения содержимого. Требуемый и поддерживаемый контент GeoPackage полностью определен в стандарте. Эти возможности построены на общей основе, и механизм расширения предоставляет разработчикам возможность включить дополнительные функции в свои GeoPackages.</p>
-<p>Стандарт кодирования GeoPackage описывает набор соглашений для хранения следующего в базе данных SQLite:</p>
-<ul>
-<li><p>векторные объекты;</p></li>
-<li><p>наборы тайловых матриц изображений и растровых карт в различных масштабах;</p></li>
-<li><p>атрибуты (непространственные данные);</p></li>
-<li><p>дополнения.</p></li>
-</ul>
-<p>Вот здесь еще можно посмотреть презентацию про shape файлы и их альтернативы <a href="https://www.slideshare.net/jachym/switch-from-shapefile" class="uri">https://www.slideshare.net/jachym/switch-from-shapefile</a></p>
-<p>Кроме этих форматов в ГИС также могут использоваться и некоторые другие, например, <strong>GPX</strong> (формат обмена данными GPS)<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>, <strong>KML</strong><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> (формат файлов, который используется для отображения географических данных в геобраузерах, таких как Google Планета Земля, Google Карты и Google Карты для мобильных устройств; создан на основе стандарта XML).</p>
-
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="6">
-<li id="fn6"><p>ESRI Shapefile Technical Description — Электрон. дан. — <a href="https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf" class="uri">https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf</a><a href="formats.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Switch from Shapefile <a href="http://switchfromshapefile.org/" class="uri">http://switchfromshapefile.org/</a><a href="formats.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p><a href="https://geojson.org/" class="uri">https://geojson.org/</a><a href="formats.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p><a href="https://github.com/topojson/topojson" class="uri">https://github.com/topojson/topojson</a><a href="formats.html#fnref9" class="footnote-back">↩︎</a></p></li>
-<li id="fn10"><p>Getting Started With GeoPackage — Электрон. дан. — <a href="http://www.geopackage.org/guidance/getting-started.html" class="uri">http://www.geopackage.org/guidance/getting-started.html</a><a href="formats.html#fnref10" class="footnote-back">↩︎</a></p></li>
-<li id="fn11"><p>GPX: the GPS Exchange Format <a href="https://www.topografix.com/gpx.asp" class="uri">https://www.topografix.com/gpx.asp</a><a href="formats.html#fnref11" class="footnote-back">↩︎</a></p></li>
-<li id="fn12"><p>Руководство по KML <a href="https://developers.google.com/kml/documentation/kml_tut?hl=ru" class="uri">https://developers.google.com/kml/documentation/kml_tut?hl=ru</a><a href="formats.html#fnref12" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="crs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="osm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

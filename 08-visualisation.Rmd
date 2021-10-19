@@ -1,8 +1,96 @@
-# Основные принципы визуализации пространственных данных {#visualisation}
+---
 
-# Методы представления географических данных
+---
+
+# Методы представления географических данных {#visualisation}
+
+> Not only is it easy to lie with maps, it's essential. To portray meaningful relationships for a complex, three-dimensional world on a flat sheet of paper or a video screen, a map must distort reality. As a scale model, the map must use symbols that almost always are proportionally much bigger or thicker than the features they represent. To avoid hiding critical information in a fog of detail, the map must offer a selective, incomplete view of reality. There's no escape from the cartographic paradox: to present a useful and truthful picture, an accurate map must tell white lies.[^visualisation-1]
+>
+> Солгать с помощью карт не только легко, но и необходимо. Чтобы изобразить значимые взаимосвязи сложного трехмерного мира на плоском листе бумаги или видеоэкране, карта должна искажать реальность. Как в масштабной модели, на карте должны использоваться символы которые почти всегда пропорционально намного больше или толще чем объекты, которые они представляют. Чтобы не скрыть важную информацию в массе деталей, карта должна давать выборочный, неполный взгляд на реальность. Невозможно избежать картографического парадокса: чтобы представить полезную и правдивую картину, точная карта должна говорить белую ложь.
+
+[^visualisation-1]: Monmonier, Mark S. 1996. *How to lie with maps*.
+
+> Each map is a manifesto for a set of beliefs about the world[^visualisation-2]
+
+[^visualisation-2]: Harley, J. B. (1991). Can there be a cartographic ethics?. *Cartographic Perspectives*, (10), 9-16. <https://doi.org/10.14714/CP10.1053>
+
+Очень хорошие примеры искажения реальности (умышленного и нет) на картах есть на виртуальной выставке [Bending lines от Бостонской библиотеки](https://www.leventhalmap.org/digital-exhibitions/bending-lines/). В этой выставке 3 раздела:
+
+-   Why Persuade? ([https://www.leventhalmap.org/digital-exhibitions/bending-lines/why-persuade/)](https://www.leventhalmap.org/digital-exhibitions/bending-lines/why-persuade/) - какая мотивация, какие причины приводят к тому, чтобы намеренно исказить сведения;
+
+[![Например, карта развития пригородов Бостона, которая показывала, что новая дорога - это экономическое чудо](images/bending%20lines%20boston%20suburbs.png)](https://www.leventhalmap.org/digital-exhibitions/bending-lines/why-persuade/1.1.2/)
+
+-   How The Lines Get Bent ([https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend)](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend) - из-за чего возникают искажения, как выбор методов визуализации и картографирования влияет на результат;
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G0_MBrJnRq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+-   The Power To Make Belief ([https://www.leventhalmap.org/digital-exhibitions/bending-lines/power-belief)-](https://www.leventhalmap.org/digital-exhibitions/bending-lines/power-belief) связь визуального представления, знаний и правды; связь между властью и истиной.
+
+[![Карта Бостона и прилегающей территории, показывающая, что этот город является географическим, а также интеллектуальным и моральным центром одной половины земного шара](images/boston%20and%20adjasent%20country.png)](https://www.leventhalmap.org/digital-exhibitions/bending-lines/power-belief/3.4.4/)
+
+Самой частой темой для искажения данных на карте является политика.
+
+```{=html}
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">As many of you noticed the map I used is not using the proper vote results from the 2016 U.S. presidential election. I have been mislead by the map posted by Lara Trump which shows more red than it should be. Here is an updated version of the GIF: <a href="https://t.co/et2P9qn5P3">pic.twitter.com/et2P9qn5P3</a></p>&mdash; Karim Douïeb (@karim_douieb) <a href="https://twitter.com/karim_douieb/status/1181934417650040832?ref_src=twsrc%5Etfw">October 9, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+Хотя в последние полтора года основная тема - коронавирус. Есть очень хороший обзор политизированных карт о распространении коронавируса <https://medium.com/nightingale/the-rhetoric-behind-the-coronavirus-propaganda-maps-3cd6ec84aa63>
+
+Есть классификация карт, предназначенных для убеждения, по применяемым на них приемам[^visualisation-3].
+
+[^visualisation-3]: Ian Muehlenhaus. Four Rhetorical Styles of Persuasive Geocommunication: An Initial Taxonomy <https://icaci.org/files/documents/ICC_proceedings/ICC2013/_extendedAbstract/355_proceeding.pdf>
+
+![](images/Muehlenhaus%201.png)
+
+![](images/Muehlenhaus%202.png)
+
+![](images/Muehlenhaus%203.png)
+
+![](images/Muehlenhaus%204.png)
+
+Также можно составить шкалу, по которой карты могут содержать больше или меньше данных, быть рациональными или эмоциональными.[^visualisation-4]
+
+[^visualisation-4]: Mathieu Guglielmino. The Rhetoric Behind the Coronavirus Propaganda Maps <https://medium.com/nightingale/the-rhetoric-behind-the-coronavirus-propaganda-maps-3cd6ec84aa63>
+
+![**Слева вверху**: процент людей, несогласных с тем, что вакцины безопасны. **Справа вверху**: загрязнение воздуха в Китае на основе спутниковых данных. **Слева внизу**: карта верующих людей. **Справа внизу**: распространение трех штаммов вируса](images/1_DauOPjpDn7DqiGgZkILNAQ.png)
+
+Так как вы будете заниматься городскими исследованиями, в том числе исследованиями социальных явлений, если вы читаете на английском, рекомендую прочитать книгу об истории картографирования различных общественных и социальных показателей Mapping Society: The Spatial Dimensions of Social Cartography[^visualisation-5].
+
+[^visualisation-5]: Vaughan, L. 2018. Mapping Society: The Spatial Dimensions of Social Cartography. London, UCL Press. <https://www.uclpress.co.uk/products/108702>
+
+### Основные принципы визуализации, про которые стоит помнить
+
+-   использовать не более 5-7 (максимум 10 категорий/цветов/оттенков);
+
+-   не перегружать карту данными;
+
+-   лучше не использовать радужную палитру;
+
+-   стараться подбирать такие палитры, которые будут хорошо читаться людьми с проблемами с различением цветов (colorblind friendly);
+
+-   помнить про то, что в первую очередь обращают внимание на верхний левый угол картинки, а потом взгляд движется зигзагом;
+
+-   помнить про гештальт принципы в визуализации.
+
+[![](images/1_5VoNEGq_cyBBZTI5TGg6LQ.png)](https://nastengraph.medium.com/%D0%B3%D0%B5%D1%88%D1%82%D0%B0%D0%BB%D1%8C%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%B2%D0%BE%D1%81%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F-%D0%B2-%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-fe009c6b7a95)
+
+Можно также руководствоваться статьей **"[Ten guidelines for effective data visualization in scientific publications](https://www.inatel.br/docentes/dayan/easyfolder/TP501/Ten%20guidelines%20for%20effective%20data%20visualization%20in%20scientific%20publications.pdf)"** (Kelleher, C. and Wagener, T., 2011), ее русский перевод с комментариями [**Гайдлайн по визуализациям в научных публикациях**](https://nastengraph.medium.com/%D0%B3%D0%B0%D0%B9%D0%B4%D0%BB%D0%B0%D0%B9%D0%BD-%D0%BF%D0%BE-%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%D0%BC-%D0%B2-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D1%8B%D1%85-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%D1%85-5641d52f1fd2)
 
 ## Пропорциональные символы (bubble map)
+
+Самый простой способ отображения числовых показателей.
+
+Размер символа соответствует величине показателя, сами символы размещаются в геометрическом центре исходных полигонов.
+
+Главные недостатки:
+
+-   если у вас большие объекты на карте, символ, как правило, размещается по центру и это не самое очевидное обозначение;
+
+-   если символы большие или их много, то могут накладываться друг на друга (частично эта проблема решается полупрозрачными символами).
+
+```{=html}
+<iframe width="100%" height="500px" src="https://studio.unfolded.ai/public/b56a3794-fe0f-47fe-94d3-44e4ca59dd80/embed" frameborder="0" allowfullscreen></iframe>
+```
 
 ## Карта плотности точек (dot density)
 
