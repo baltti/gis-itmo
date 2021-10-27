@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-10-20" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,7 +144,10 @@
 <li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
 <li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
 <li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
-<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.7</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
+<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
+<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -279,12 +282,34 @@
 <p>На таких картах показываются линии равных значений. Самый распространенный пример подобных карт - это карты рельефа местности с горизонталями.</p>
 <p>На подобных картах могут теряться некоторые нюансы в распределении данных, так как при построении линий равных значений происходит значительное обобщение.</p>
 <p><a href="https://riatelab.github.io/MDM/"><img src="images/isopleth%20map.png" alt="Погибшие и пропавшие в Средиземном море мигранты" /></a></p>
+<p><a href="https://www.behance.net/gallery/108818317/My-30DayMapChallenge-20"><img src="images/5da043108818317.5fc64abd31939.png" /></a></p>
 </div>
-<div id="bivariate-maps" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Bivariate maps</h2>
+<div id="карта-потоков-flow-map" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Карта потоков (flow map)</h2>
+<p>Карты потоков используются для визуализации движения, потоков - например, пассажиропоток или миграция.</p>
+<p><a href="https://owenpowell.wordpress.com/30-day-map-challenge-2020/"><img src="images/2_lines.jpg" /></a></p>
+<p><a href="https://www.behance.net/gallery/108818317/My-30DayMapChallenge-20"><img src="images/e15cce108818317.5fc64abd2fdfe.png" /></a></p>
+<p><a href="https://flowmap.blue/1LoeL7i9GHl67Y4SPyp5fiyex6lRqxOuib_mfmg978q4?v=40.726259,-73.907003,10.69,0,0&amp;a=0&amp;as=1&amp;b=1&amp;bo=75&amp;c=1&amp;ca=1&amp;d=1&amp;fe=1&amp;lt=1&amp;lfm=ALL&amp;t=20191202T150000,20191202T170000&amp;col=Default&amp;f=50"><img src="images/NYC%20Uber%20trips.PNG" alt="Поездки на Uber в Нью-Йорке" /></a></p>
+<p>Для создания карт потоков есть довольно простой инструмент <a href="https://flowmap.blue/">Flowmap blue.</a> На сайте проекта также можно ознакомиться с <a href="https://flowmap.blue/gallery">галереей примеров</a>подобных карт.</p>
+</div>
+<div id="d-карты" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> 3D карты</h2>
+<p>Достатточно сложный вариант для подготовки статических карт.</p>
+<p><a href="https://aurelienchaumet.github.io/realisations/30daymapchallenge/"><img src="images/day10_malta_pop_cube_sd.png" /></a></p>
+<p><a href="https://github.com/MarcoMinghini/30DayMapChallenge-2020"><img src="images/Day11_3D.gif" /></a></p>
+<p><a href="http://www.statsmapsnpix.com/2021/04/gridded-gdp-maps-for-spiky-world.html"><img src="images/world_spikes_11520x6480_PERS_-55_tilt_colour_BLUE_logo_only_09_dec_2020.png" alt="Плотность населения" /></a></p>
+<p><a href="http://www.statsmapsnpix.com/2020/04/population-density-in-europe.html"><img src="images/europe_1km_density_exports_1.png" /></a></p>
+<p>Подобные карты плотности населения можно сделать по <a href="http://www.statsmapsnpix.com/2020/11/how-to-make-3d-population-density.html">туториалу</a> от Аласдера Рея.</p>
+<p><a href="https://pudding.cool/2018/10/city_3d/"><img src="images/human%20terrain.PNG" /></a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GOv06YuvIDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="bivariate-maps" class="section level2" number="9.9">
+<h2><span class="header-section-number">9.9</span> Bivariate maps</h2>
 <p>Есть несколько методов отображения нескольких переменных одновременно: можно закодировать символами (например, цвет обозначает одну характеристику, а размер или форма символа - другую), а можно составить мультивариантную картограмму.</p>
 <p><a href="https://studio.unfolded.ai/public/ae455d39-ef79-4e21-9d5a-fb8f30fc8a14"><img src="images/chicago%20income.PNG" alt="Количество семей (высота) и доход (цвет) в Чикаго" /></a></p>
-<p>Строятся на основе наложения шкал двух переменных.</p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=dce81739717342e5943faa2495f581ae"><img src="images/proportional%20symbols%20bivariate.PNG" alt="Результаты выборов в США, 2016. Цветом показана выигравшая партия, размер - количество голосов" /></a></p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=74a50d4d9be34e16a2ef8557c5732b90"><img src="images/proportional%20symbols%20multivariate.PNG" /></a></p>
+<p>Картограммы (choropleth) строятся на основе наложения шкал двух переменных.</p>
 <p><img src="images/js_bivariateMix.gif" /></p>
 <p>К ним в целом применимы все те же принципы, что и к обычным картограммам, но важно помнить, что когнитивная нагрузка зрителя очень сильно возрастает.</p>
 <p><img src="images/js_finalBivariateMap.png" /></p>
@@ -295,6 +320,20 @@
 <p><a href="https://github.com/ikashnitsky/the-lancet-2018"><img src="images/OFFShqF%20-%20Imgur.png" /></a></p>
 <p>Также любопытный метод отображения сразу нескольких переменных - <a href="https://docs.google.com/presentation/d/1MzO5TtLgBMnzAO_nckMGdFBW1L93bCV4fp2L0i-jasY/edit?usp=sharing">лица Чернова</a><a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>
 <p><img src="images/CV12_Fig11.png" /></p>
+</div>
+<div id="еще-несколько-нестандартных-подходов" class="section level2" number="9.10">
+<h2><span class="header-section-number">9.10</span> Еще несколько нестандартных подходов</h2>
+<p><a href="https://www.behance.net/gallery/108818317/My-30DayMapChallenge-20"><img src="images/2247c3108818317.5fc64abd32cb0.png" /></a></p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=53b3c92e3366470e8f7481d988abe21f"><img src="images/DeMers%20cartogram.PNG" alt="DeMers cartogram" /></a></p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=7aeb80bad3b84172bba185f6c327e2ad"><img src="images/Dorling%20cartogram.PNG" alt="Dorling cartogram" /></a></p>
+<p>Эти два подхода очень похожи между собой: вместо истинных очертаний объектов они заменяются простыми геометрическими фигурами (квадратом или кругом) и смещаются на карте так, чтобы не было наложений.</p>
+<p>Таким образом искажется география объектов, но это позволяет показать данные не отвлекая внимание зрителя на форму и размер объектов.</p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=985aeec30def4b04a92e9df9ebc64d5c"><img src="images/Grdided%20cartogram.PNG" alt="Grided cartogram" /></a></p>
+<p>В этом случае истинная форма объектов тоже не отображется, но здесь она заменяется на регулярную сетку, каждая ячейка которой представляет собой 1 единицу чего-либо (в данном случае 1 голос электорального колледжа).</p>
+<p>Такой вид представления данных позволяет обратить внимание на значение параметра, но очень важно помнить, что искажения формы здесь могут быть значительными.</p>
+<p><a href="https://carto.maps.arcgis.com/apps/webappviewer/index.html?id=ada8d4d9bfce4309adc53589776c479e"><img src="images/puzzling.PNG" alt="Tesselated cartogram" /></a></p>
+<p>В этом варианте оформления карты каждый объект (штат) также заменен на ряд ячеек, каждая из которых равна 1 голосу электорального колледжа, кроме того, ячейки являются стилизованным изображением выигравшего голосование в соответствующем штате кандидата.</p>
+<p>Последние несколько примеров взяты из <a href="https://carto.maps.arcgis.com/apps/MinimalGallery/index.html?appid=b3d1fe0e8814480993ff5ad8d0c62c32">галереи</a>, дополняющей книгу <a href="https://www.esri.com/en-us/esri-press/browse/thematic-mapping">Thematic mapping: 101 Inspiring Ways to Visualise Empirical Data</a> (Kenneth Field).</p>
 
 </div>
 </div>

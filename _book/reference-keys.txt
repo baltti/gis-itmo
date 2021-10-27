@@ -49,4 +49,7 @@ visualisation
 анаморфная-карта-cartogram
 плиточные-карты-2d-histogram-map-grid
 карты-равных-значений-isopleth-maps
+карта-потоков-flow-map
+d-карты
 bivariate-maps
+еще-несколько-нестандартных-подходов
