@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 10 Создание различных типов карт в QGIS | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 10 Создание различных типов карт в QGIS | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 10 Создание различных типов карт в QGIS | Геоинформатика и геоинформационные системы" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 10 Создание различных типов карт в QGIS | Геоинформатика и геоинформационные системы" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2021-11-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="visualisation.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Геоинформатика и геоинформационные системы</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#add-object"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#tiles"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#reproject-fly"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#оформление-карты"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+<li class="chapter" data-level="3.4.3" data-path="basics.html"><a href="basics.html#параметры-листа"><i class="fa fa-check"></i><b>3.4.3</b> Параметры листа</a></li>
+<li class="chapter" data-level="3.4.4" data-path="basics.html"><a href="basics.html#добавление-карты"><i class="fa fa-check"></i><b>3.4.4</b> Добавление карты</a></li>
+<li class="chapter" data-level="3.4.5" data-path="basics.html"><a href="basics.html#масштабная-линейка"><i class="fa fa-check"></i><b>3.4.5</b> Масштабная линейка</a></li>
+<li class="chapter" data-level="3.4.6" data-path="basics.html"><a href="basics.html#легенда"><i class="fa fa-check"></i><b>3.4.6</b> Легенда</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
+<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
+<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
+<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#буферные-зоны"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
+<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
+<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#построение-сетки"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
+<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>9</b> Методы представления географических данных</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="visualisation.html"><a href="visualisation.html#основные-принципы-визуализации-про-которые-стоит-помнить"><i class="fa fa-check"></i><b>9.0.1</b> Основные принципы визуализации, про которые стоит помнить</a></li>
+<li class="chapter" data-level="9.1" data-path="visualisation.html"><a href="visualisation.html#пропорциональные-символы-bubble-map"><i class="fa fa-check"></i><b>9.1</b> Пропорциональные символы (bubble map)</a></li>
+<li class="chapter" data-level="9.2" data-path="visualisation.html"><a href="visualisation.html#карта-плотности-точек-dot-density"><i class="fa fa-check"></i><b>9.2</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="9.3" data-path="visualisation.html"><a href="visualisation.html#картограмма-choropleth"><i class="fa fa-check"></i><b>9.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
+<li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
+<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
+<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
+<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html"><i class="fa fa-check"></i><b>10</b> Создание различных типов карт в QGIS</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#исходные-данные"><i class="fa fa-check"></i><b>10.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="10.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#пропорциональные-символы-bubble-map-1"><i class="fa fa-check"></i><b>10.2</b> Пропорциональные символы (bubble map)</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-1-через-дополнительный-слой-знака"><i class="fa fa-check"></i><b>10.2.1</b> Способ 1 (через дополнительный слой знака)</a></li>
+<li class="chapter" data-level="10.2.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-2-через-круговую-диаграмму"><i class="fa fa-check"></i><b>10.2.2</b> Способ 2 (через круговую диаграмму)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#картограмма-choropleth-1"><i class="fa fa-check"></i><b>10.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="10.4" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-плотности-точек-dot-density-1"><i class="fa fa-check"></i><b>10.4</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="10.5" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#анаморфная-карта-cartogram-1"><i class="fa fa-check"></i><b>10.5</b> Анаморфная карта (cartogram)</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Геоинформатика и геоинформационные системы</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="visualisation-qgis" class="section level1" number="10">
+<h1><span class="header-section-number"> 10</span> Создание различных типов карт в QGIS</h1>
+<div id="исходные-данные" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Исходные данные</h2>
+<p>В качестве исходных данных взяты границы регионов РФ с сайта <a href="https://www.diva-gis.org/gdata" class="uri">https://www.diva-gis.org/gdata</a>.</p>
+<p>Исходный слой был перепроецирован в систему координат <code>Asia North Albers Equal Area Conic ESRI:102025</code> для минимизации искажений на карте. Также дополнительно были выполнены преобразования для того, чтобы Чукотка стала единым объектом.</p>
+<p>В атрибутивную таблицу добавлены колонки с площадью субъектов и количеством населения (данные о населении по состоянию на 1 января 2021 года, <a href="https://rosstat.gov.ru/compendium/document/13282">Росстат</a>).</p>
+<p>Полученный слой можно скачать <a href="https://drive.google.com/file/d/1smnWbvkk1qE4rv5p8QWo108MGqcylMJH/view?usp=sharing">здесь</a>.</p>
+<p>После открытия слоя в QGIS и перепроецирования на лету в систему координат <code>Asia North Albers Equal Area Conic ESRI:102025</code> (см. <a href="basics.html#add-object">3.1</a> и <a href="basics.html#reproject-fly">3.3</a>) он будет выглядет так</p>
+<p><img src="images/112.PNG" /></p>
+</div>
+<div id="пропорциональные-символы-bubble-map-1" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Пропорциональные символы (bubble map)</h2>
+<p>Как уже обуждалось ранее, один из самых простых способов показать числовые значения - символы, размер которых пропорционален величине отображаемых значений.</p>
+<div id="способ-1-через-дополнительный-слой-знака" class="section level3" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Способ 1 (через дополнительный слой знака)</h3>
+<p>Для того, чтобы создать такую карту нужно открыть свойства слоя (либо двойным кликом на название слоя, либо из контекстного меню Свойства).</p>
+<div class="figure">
+<img src="images/113.PNG" alt="" />
+<p class="caption">Окно свойств слоя</p>
+</div>
+<p>В настоящий момент для слоя задана обычная заливка, которую нам нужно заменить на символы с настраиваемым размером. Для этого нужно нажать на <img src="images/114.PNG" /></p>
+<p>После чего появится еще одна заливка в свойствах слоя.</p>
+<p><img src="images/115.PNG" /></p>
+<p>Одну из этих заливок мы заменим на символы. Чтобы это сделать, нужно выбрать тип слоя <strong>Centroid fill</strong>.</p>
+<p><img src="images/116.png" /></p>
+<p>Отметим, что нам нужно рамещать маркеры внутри полигона, но не нужно рисовать их на каждой части мультиполигона.</p>
+<p><img src="images/117.PNG" /></p>
+<p>Далее проведем настройку непосредственно маркера. Чтобы открыть эти настройки, нужно щелкнуть на слова <strong>Simple marker</strong>.</p>
+<p><img src="images/118.PNG" /></p>
+<p>Каждый символ может состоят из нескольких слоев символов <strong>Symbol layers</strong>.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> Дерево символов показывает все эти слои и как они расположены относительно друг друга. Такие слои формируют новый комбинированный символ. Также здесь автоматически пересчитываются динамические показатели символов после изменения признаков.</p>
+<p>Основные инструменты для управления деревом символов:</p>
+<ul>
+<li><p><a href="https://docs.qgis.org/3.16/en/_images/symbologyAdd.png"><img src="https://docs.qgis.org/3.16/en/_images/symbologyAdd.png" alt="signPlus" /></a> добавление нового слоя символа (можно добавлять сколько угодно слоев); t</p></li>
+<li><p><a href="https://docs.qgis.org/3.16/en/_images/symbologyRemove.png"><img src="https://docs.qgis.org/3.16/en/_images/symbologyRemove.png" alt="signMinus" /></a> удаление слоя;</p></li>
+<li><p>блокировка цветов слоя символа <a href="https://docs.qgis.org/3.16/en/_images/locked.png"><img src="https://docs.qgis.org/3.16/en/_images/locked.png" alt="locked" /></a> (заблокированные слои не меняются, даже если пользователь меняет настройки цвета глобально или на более высоком уровне иерархии);</p></li>
+<li><p><a href="https://docs.qgis.org/3.16/en/_images/mActionDuplicateLayer.png"><img src="https://docs.qgis.org/3.16/en/_images/mActionDuplicateLayer.png" alt="duplicateLayer" /></a> дублировать слой символа или группу слоев;</p></li>
+<li><p>свиг вверх или вниз по иерархии.</p></li>
+</ul>
+<p>Мы хотим установить размер символа, чтобы он отражал число населения в регионе. Для этого напротив графы размер нужно нажать на кнопку <img src="images/119.PNG" />и выбрать поле, по которому будет задаваться размер.</p>
+<p><img src="images/120.png" /></p>
+<p>Чтобы карта была более читаема заливку в этом слое либо совсем убрать (как показано на картинке), либо сделать нейтральной и полупрозрачной.</p>
+<p><img src="images/121.PNG" /></p>
+<p>Полученная карта</p>
+<p><img src="images/122.PNG" /></p>
+<p>На карте видно, что в европейской части страны многие символы перекрывают друг друга, а в восточной Сибири и на Дальнем Востоке наборот символы очень малы.</p>
+<p>Можно осуществить дальнейшую настройку символов, например, попробовать изменить размер, заменить цвет на более нейтральный и сделать символы полупрозрачными, чтобы можно было их различить при перекрывании точек.</p>
+<p><img src="images/124.PNG" /></p>
+</div>
+<div id="способ-2-через-круговую-диаграмму" class="section level3" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Способ 2 (через круговую диаграмму)</h3>
+<p>Также градуированные символы можно задать с использованием круговых диграмм.</p>
+<p>Для этого нужно открыть свойства слоя на вкладке <strong>Диаграммы</strong> и выбрать тип круговую диаграмму (Pie chart), после чего задать переменную, по которой будут отрисовываться символы.</p>
+<p><img src="images/125.PNG" /></p>
+<p>Далее настроим размер в зависимоти от величины населения.</p>
+<p><img src="images/126.PNG" /></p>
+<p>Результат получается аналогичный результату в первом способе, но строится и загружается такая карта значительно медленнее.</p>
+<p><img src="images/127.PNG" /></p>
+</div>
+</div>
+<div id="картограмма-choropleth-1" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Картограмма (choropleth)</h2>
+<p>Так как данные в нашем случае представлены в виде полигонов, очевидный способ отображения - это картограмма.</p>
+<p>Самый простой способ создания картограммы - открыть настройки стиля, выбрать тип символа <strong>Градуированный знак</strong>, поле, по значениям которого будет задаваться цвет полигонов и классифицировать значения.</p>
+<p><img src="images/128.PNG" /></p>
+<p>В результате получим подобную карту.</p>
+<p><img src="images/129.PNG" /></p>
+<p>Мы можем далее подкорректировать интервалы, подобрать градиент и прочие дополнительные настройки.</p>
+<p><img src="images/130.PNG" /></p>
+<p><img src="images/131.PNG" /></p>
+<p>Но, как уже говорилось на прошлых занятиях, на подобных картах не рекомендуют использовать абсолютные значения, а нормализовывать их. В нашем случае карта как раз была построена по количеству населения, хотя предпочтительнее здесь будет отображать плотность населения.</p>
+<p>Значение плотности населения мы можем рассчитать с помощью калькулятора полей и записать в новый столбец, а потом создать карту по этому новому показателю. Или же мы можем записать выражение прямо в настройках стиля нашего слоя.</p>
+<p><img src="images/132.PNG" /></p>
+<p>Так как количество населения у нас было дано в миллионах человек, сначала это значение было домножено на 1 000 000, а потом поделено на значение площади в километрах квадратных. Таким образом мы получим плотность населения на 1 километр квадратный.</p>
+<p>Соответственно у нас пересчитаются классы на основе новых значений.</p>
+<p><img src="images/133.PNG" /></p>
+<p>На полученной карте видно, что классификация в нашем случае подобрана не удачно: много близких значений, поэтому большинство объектов раскрашены одним цветом.</p>
+<div class="figure">
+<img src="images/134.PNG" alt="" />
+<p class="caption">Плотность населения, чел/км кв (естественные интервалы)</p>
+</div>
+<p>Возможно в данном случае более подходящим методом классификации будут квантили (результат показан на картинке ниже) или ручное задание интервалов.</p>
+<div class="figure">
+<img src="images/135.PNG" alt="" />
+<p class="caption">Плотность населения, чел/км кв (квантили)</p>
+</div>
+<p>Для акцентирования внимания на границах и различиях между регионами можно выбрать тип символа <strong>Shapeburst fill</strong>. Этот тип символа создает градиент от границ полигонов к их центру.</p>
+<p><img src="images/136.PNG" /></p>
+<p><img src="images/137.PNG" /></p>
+</div>
+<div id="карта-плотности-точек-dot-density-1" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Карта плотности точек (dot density)</h2>
+<p>Карту плотности точек как и карту пропорциональных символов можно создать комбинацией слоев символов внутри настроек стиля.</p>
+<p>Для этого к обычной заливке <strong>Simple fill</strong> нужно добавить дополнительный слой <strong>Random marker fill</strong>.</p>
+<p><img src="images/138.PNG" /></p>
+<p>Количество точек в нашем случае нужно задать выражением.</p>
+<p><img src="images/139.png" /></p>
+<p>Сделаем так, чтобы 1 точка была равно 100 000 человек. Количество населения в атрибутивной таблице было задано в миллионах, поэтому наши значения нужно просто умножить на 10.</p>
+<p><img src="images/140.PNG" /></p>
+<p>Сразу же скорректируем размер маркера и цвет.</p>
+<p><img src="images/141.PNG" /></p>
+<p>Полученная карта</p>
+<div class="figure">
+<img src="images/142.PNG" alt="" />
+<p class="caption">Карта плотности населения (1 точка - 100 000 человек)</p>
+</div>
+<blockquote>
+<p>Важно помнить, что точки расставлены внутри полигонов случайным образом, то есть они не отображают реальное расположение населения.</p>
+</blockquote>
+</div>
+<div id="анаморфная-карта-cartogram-1" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Анаморфная карта (cartogram)</h2>
+<p>В QGIS нет встроенного метода создания анаморфных карт, но это можно сделать с помощью плагина Cartogram. Как устанавливать плагины рассказано в <a href="basics.html#tiles">3.2</a>.</p>
+<p><img src="images/143.PNG" /></p>
+<p>После установки плагина на панели инструментов должен появиться значок <img src="images/144.PNG" /></p>
+<p>В диалоговом окне создания анаморфной карты нужно указать:</p>
+<ul>
+<li><p>для какого слоя она создается;</p></li>
+<li><p>по какому показателю;</p></li>
+<li><p>критерии остановки - количество итераций и максимальная ошибка (расчет прекращается, когда выполнено одно из условий).</p></li>
+</ul>
+<p><img src="images/145.PNG" /></p>
+<div class="figure">
+<img src="images/146.PNG" alt="" />
+<p class="caption">Анаморфная карта по числу населения</p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="23">
+<li id="fn23"><p>The symbol layer tree <a href="https://docs.qgis.org/3.16/en/docs/user_manual/style_library/symbol_selector.html#the-symbol-layer-tree" class="uri">https://docs.qgis.org/3.16/en/docs/user_manual/style_library/symbol_selector.html#the-symbol-layer-tree</a><a href="visualisation-qgis.html#fnref23" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualisation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

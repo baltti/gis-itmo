@@ -9,6 +9,7 @@ rmd_files:
     - "06-styles.Rmd"
     - "07-spatial-analysis-basics.Rmd"
     - "08-visualisation.Rmd"
+    - "09-visualisation-qgis.Rmd"
 delete_merged_file: true
 language:
   ui:
