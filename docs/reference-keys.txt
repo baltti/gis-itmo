@@ -61,3 +61,6 @@ visualisation-qgis
 картограмма-choropleth-1
 карта-плотности-точек-dot-density-1
 анаморфная-карта-cartogram-1
+datawrapper
+choropleth-datawrapper
+плиточная-карта

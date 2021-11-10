@@ -10,6 +10,7 @@ rmd_files:
     - "07-spatial-analysis-basics.Rmd"
     - "08-visualisation.Rmd"
     - "09-visualisation-qgis.Rmd"
+    - "10-visualisation-datawrapper.Rmd"
 delete_merged_file: true
 language:
   ui:
