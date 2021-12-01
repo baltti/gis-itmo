@@ -11,6 +11,10 @@ rmd_files:
     - "08-visualisation.Rmd"
     - "09-visualisation-qgis.Rmd"
     - "10-visualisation-datawrapper.Rmd"
+    - "11-vectorisation.Rmd"
+    - "12-network-analysis.Rmd"
+    - "13-relief.Rmd"
+    - "exam.Rmd"
 delete_merged_file: true
 language:
   ui:

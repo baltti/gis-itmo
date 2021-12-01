@@ -65,3 +65,11 @@ visualisation-qgis
 datawrapper
 choropleth-datawrapper
 плиточная-карта
+vectorisation
+геопривязка-растра
+создание-нового-слоя-и-добавление-в-него-объектов
+прилипание-объектов
+редактирование-объектов
+network
+relief
+exam
