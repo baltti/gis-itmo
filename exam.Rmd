@@ -34,6 +34,30 @@
 
 Размер зоны доступности 1000 м.
 
+### Вариант 4
+
+Бары <https://disk.yandex.ru/d/ITd6UNbS_upC1A>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 500 м
+
+### Вариант 5
+
+Детские сады <https://disk.yandex.ru/d/Keo8wu1ceOEdbQ>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 300 м
+
+### Вариант 6
+
+Поликлиники <https://disk.yandex.ru/d/JpxT3JSOqPxo4Q>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 1000 м
+
 ## Задание 2
 
 Построить картограмму по плотности населения и оформить ее для печати.
@@ -86,8 +110,38 @@
 
 Размер зоны доступности 1000 м.
 
+### Вариант 4
+
+Бары <https://disk.yandex.ru/d/ITd6UNbS_upC1A>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 500 м
+
+### Вариант 5
+
+Детские сады <https://disk.yandex.ru/d/Keo8wu1ceOEdbQ>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 300 м
+
+### Вариант 6
+
+Поликлиники <https://disk.yandex.ru/d/JpxT3JSOqPxo4Q>
+
+Многоквартирные дома <https://disk.yandex.ru/d/6y4b5OweEF4K8w>
+
+Радиус зоны доступности 1000 м
+
 ## Задание 5
 
 Построить карту плотности точек по населению и оформить ее для печати.
 
 Исходный файл <https://drive.google.com/file/d/1smnWbvkk1qE4rv5p8QWo108MGqcylMJH/view?usp=sharing>
+
+## Задание 6
+
+Построить картограмму по количеству населения и оформить ее для печати.
+
+Исходный файл для построения картограмм [<https://drive.google.com/file/d/1smnWbvkk1qE4rv5p8QWo108MGqcylMJH/view?usp=sharing>](https://drive.google.com/file/d/1smnWbvkk1qE4rv5p8QWo108MGqcylMJH/view?usp=sharing){.uri}
