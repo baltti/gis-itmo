@@ -24,7 +24,7 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2021-12-15" />
+<meta name="date" content="2022-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,7 +124,7 @@
 <li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
 <li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#буферные-зоны"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#buffer"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
 <li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
 <li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
 <li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
@@ -182,12 +182,17 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>13</b> Сетевой анализ</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#сетевой-анализ-стандартными-средствами-qgis"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
+<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#network-standart"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
 <ul>
 <li class="chapter" data-level="13.1.1" data-path="network.html"><a href="network.html#область-обслуживания"><i class="fa fa-check"></i><b>13.1.1</b> Область обслуживания</a></li>
 <li class="chapter" data-level="13.1.2" data-path="network.html"><a href="network.html#поиск-кратчайшего-пути"><i class="fa fa-check"></i><b>13.1.2</b> Поиск кратчайшего пути</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a></li>
+<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="network.html"><a href="network.html#матрицы-источник-назначение"><i class="fa fa-check"></i><b>13.2.1</b> Матрицы источник-назначение</a></li>
+<li class="chapter" data-level="13.2.2" data-path="network.html"><a href="network.html#построение-изохрон"><i class="fa fa-check"></i><b>13.2.2</b> Построение изохрон</a></li>
+<li class="chapter" data-level="13.2.3" data-path="network.html"><a href="network.html#расчет-кратчайшего-пути-между-точками"><i class="fa fa-check"></i><b>13.2.3</b> Расчет кратчайшего пути между точками</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="relief.html"><a href="relief.html"><i class="fa fa-check"></i><b>14</b> Построение рельефа</a>
 <ul>
@@ -313,7 +318,7 @@
 <p>Использования <strong>Калькулятора полей</strong> этим, конечно, не ограничивается: с его помощью можно осуществлять различные вычисления между атрибутами ваших объектов. Полный перечень функций <strong>Калькулятора полей</strong> с их описанием есть в <a href="https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/functions_list.html">официальной документации</a>.</p>
 </div>
 </div>
-<div id="буферные-зоны" class="section level2" number="8.3">
+<div id="buffer" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Буферные зоны</h2>
 <p>Для того, чтобы выполнять эту и последующие операции необходимо открыть панель инструментов анализа (<strong>Вид — Панели — Инструменты анализа</strong>).</p>
 <p><img src="images/72.png" /></p>
