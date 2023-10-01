@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 3 Начало работы | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 3 Начало работы | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 3 Начало работы | Геоинформатика и геоинформационные системы" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 3 Начало работы | Геоинформатика и геоинформационные системы" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2022-02-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="crs.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Геоинформатика и геоинформационные системы</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#add-object"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#tiles"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#reproject-fly"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#layout"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
+<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
+<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
+<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#buffer"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
+<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
+<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#grid"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
+<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>9</b> Методы представления географических данных</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="visualisation.html"><a href="visualisation.html#основные-принципы-визуализации-про-которые-стоит-помнить"><i class="fa fa-check"></i><b>9.0.1</b> Основные принципы визуализации, про которые стоит помнить</a></li>
+<li class="chapter" data-level="9.1" data-path="visualisation.html"><a href="visualisation.html#пропорциональные-символы-bubble-map"><i class="fa fa-check"></i><b>9.1</b> Пропорциональные символы (bubble map)</a></li>
+<li class="chapter" data-level="9.2" data-path="visualisation.html"><a href="visualisation.html#карта-плотности-точек-dot-density"><i class="fa fa-check"></i><b>9.2</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="9.3" data-path="visualisation.html"><a href="visualisation.html#картограмма-choropleth"><i class="fa fa-check"></i><b>9.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
+<li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
+<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
+<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
+<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html"><i class="fa fa-check"></i><b>10</b> Создание различных типов карт в QGIS</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#исходные-данные"><i class="fa fa-check"></i><b>10.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="10.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#пропорциональные-символы-bubble-map-1"><i class="fa fa-check"></i><b>10.2</b> Пропорциональные символы (bubble map)</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-1-через-дополнительный-слой-знака"><i class="fa fa-check"></i><b>10.2.1</b> Способ 1 (через дополнительный слой знака)</a></li>
+<li class="chapter" data-level="10.2.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-2-через-круговую-диаграмму"><i class="fa fa-check"></i><b>10.2.2</b> Способ 2 (через круговую диаграмму)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#картограмма-choropleth-1"><i class="fa fa-check"></i><b>10.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="10.4" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-плотности-точек-dot-density-1"><i class="fa fa-check"></i><b>10.4</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="10.5" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#анаморфная-карта-cartogram-1"><i class="fa fa-check"></i><b>10.5</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="10.6" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-с-одновременным-отображением-двух-переменных-bivariate-map"><i class="fa fa-check"></i><b>10.6</b> Карта с одновременным отображением двух переменных (bivariate map)</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="datawrapper.html"><a href="datawrapper.html"><i class="fa fa-check"></i><b>11</b> Создание карт с помощью сервиса Datawrapper</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="datawrapper.html"><a href="datawrapper.html#choropleth-datawrapper"><i class="fa fa-check"></i><b>11.1</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="11.2" data-path="datawrapper.html"><a href="datawrapper.html#плиточная-карта"><i class="fa fa-check"></i><b>11.2</b> Плиточная карта</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>12</b> Векторизация</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="vectorisation.html"><a href="vectorisation.html#геопривязка-растра"><i class="fa fa-check"></i><b>12.1</b> Геопривязка растра</a></li>
+<li class="chapter" data-level="12.2" data-path="vectorisation.html"><a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов"><i class="fa fa-check"></i><b>12.2</b> Создание нового слоя и добавление в него объектов</a></li>
+<li class="chapter" data-level="12.3" data-path="vectorisation.html"><a href="vectorisation.html#прилипание-объектов"><i class="fa fa-check"></i><b>12.3</b> Прилипание объектов</a></li>
+<li class="chapter" data-level="12.4" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-объектов"><i class="fa fa-check"></i><b>12.4</b> Редактирование объектов</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vectorisation.html"><a href="vectorisation.html#перемещение-объекта"><i class="fa fa-check"></i><b>12.4.1</b> Перемещение объекта</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vectorisation.html"><a href="vectorisation.html#поворот-объекта"><i class="fa fa-check"></i><b>12.4.2</b> Поворот объекта</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vectorisation.html"><a href="vectorisation.html#преобразование-объекта-в-кольцо"><i class="fa fa-check"></i><b>12.4.3</b> Преобразование объекта в кольцо</a></li>
+<li class="chapter" data-level="12.4.4" data-path="vectorisation.html"><a href="vectorisation.html#разбивка-объекта"><i class="fa fa-check"></i><b>12.4.4</b> Разбивка объекта</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>13</b> Сетевой анализ</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#network-standart"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="network.html"><a href="network.html#область-обслуживания"><i class="fa fa-check"></i><b>13.1.1</b> Область обслуживания</a></li>
+<li class="chapter" data-level="13.1.2" data-path="network.html"><a href="network.html#поиск-кратчайшего-пути"><i class="fa fa-check"></i><b>13.1.2</b> Поиск кратчайшего пути</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="network.html"><a href="network.html#матрицы-источник-назначение"><i class="fa fa-check"></i><b>13.2.1</b> Матрицы источник-назначение</a></li>
+<li class="chapter" data-level="13.2.2" data-path="network.html"><a href="network.html#построение-изохрон"><i class="fa fa-check"></i><b>13.2.2</b> Построение изохрон</a></li>
+<li class="chapter" data-level="13.2.3" data-path="network.html"><a href="network.html#расчет-кратчайшего-пути-между-точками"><i class="fa fa-check"></i><b>13.2.3</b> Расчет кратчайшего пути между точками</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="relief.html"><a href="relief.html"><i class="fa fa-check"></i><b>14</b> Построение рельефа</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="relief.html"><a href="relief.html#добавление-цифровой-модели-рельефа"><i class="fa fa-check"></i><b>14.1</b> Добавление цифровой модели рельефа</a></li>
+<li class="chapter" data-level="14.2" data-path="relief.html"><a href="relief.html#теневой-рельефrelief-1"><i class="fa fa-check"></i><b>14.2</b> Теневой рельеф</a></li>
+<li class="chapter" data-level="14.3" data-path="relief.html"><a href="relief.html#крутизна-склоновrelief-3"><i class="fa fa-check"></i><b>14.3</b> Крутизна склонов</a></li>
+<li class="chapter" data-level="14.4" data-path="relief.html"><a href="relief.html#экспозиция-склоновrelief-4"><i class="fa fa-check"></i><b>14.4</b> Экспозиция склонов</a></li>
+<li class="chapter" data-level="14.5" data-path="relief.html"><a href="relief.html#расчет-неоднородности-рельефаrelief-5"><i class="fa fa-check"></i><b>14.5</b> Расчет неоднородности рельефа</a></li>
+<li class="chapter" data-level="14.6" data-path="relief.html"><a href="relief.html#построение-трехмерной-поверхности"><i class="fa fa-check"></i><b>14.6</b> Построение трехмерной поверхности</a></li>
+<li class="chapter" data-level="14.7" data-path="relief.html"><a href="relief.html#создание-горизонталей"><i class="fa fa-check"></i><b>14.7</b> Создание горизонталей</a></li>
+<li class="chapter" data-level="14.8" data-path="relief.html"><a href="relief.html#построение-профиля-местности"><i class="fa fa-check"></i><b>14.8</b> Построение профиля местности</a>
+<ul>
+<li class="chapter" data-level="14.8.1" data-path="relief.html"><a href="relief.html#плагин-profiletool"><i class="fa fa-check"></i><b>14.8.1</b> Плагин ProfileTool</a></li>
+<li class="chapter" data-level="14.8.2" data-path="relief.html"><a href="relief.html#средствами-панели-инструментов"><i class="fa fa-check"></i><b>14.8.2</b> Средствами панели инструментов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="exam.html"><a href="exam.html"><i class="fa fa-check"></i><b>15</b> Примеры заданий для зачета</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="exam.html"><a href="exam.html#задание-1"><i class="fa fa-check"></i><b>15.1</b> Задание 1</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="exam.html"><a href="exam.html#вариант-1"><i class="fa fa-check"></i><b>15.1.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.1.2" data-path="exam.html"><a href="exam.html#вариант-2"><i class="fa fa-check"></i><b>15.1.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.1.3" data-path="exam.html"><a href="exam.html#вариант-3"><i class="fa fa-check"></i><b>15.1.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.1.4" data-path="exam.html"><a href="exam.html#вариант-4"><i class="fa fa-check"></i><b>15.1.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.1.5" data-path="exam.html"><a href="exam.html#вариант-5"><i class="fa fa-check"></i><b>15.1.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.1.6" data-path="exam.html"><a href="exam.html#вариант-6"><i class="fa fa-check"></i><b>15.1.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="exam.html"><a href="exam.html#задание-2"><i class="fa fa-check"></i><b>15.2</b> Задание 2</a></li>
+<li class="chapter" data-level="15.3" data-path="exam.html"><a href="exam.html#задание-3"><i class="fa fa-check"></i><b>15.3</b> Задание 3</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="exam.html"><a href="exam.html#вариант-1-1"><i class="fa fa-check"></i><b>15.3.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.3.2" data-path="exam.html"><a href="exam.html#вариант-2-1"><i class="fa fa-check"></i><b>15.3.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.3.3" data-path="exam.html"><a href="exam.html#вариант-3-1"><i class="fa fa-check"></i><b>15.3.3</b> Вариант 3</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="exam.html"><a href="exam.html#задание-4"><i class="fa fa-check"></i><b>15.4</b> Задание 4</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="exam.html"><a href="exam.html#вариант-1-2"><i class="fa fa-check"></i><b>15.4.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.4.2" data-path="exam.html"><a href="exam.html#вариант-2-2"><i class="fa fa-check"></i><b>15.4.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.4.3" data-path="exam.html"><a href="exam.html#вариант-3-2"><i class="fa fa-check"></i><b>15.4.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.4.4" data-path="exam.html"><a href="exam.html#вариант-4-1"><i class="fa fa-check"></i><b>15.4.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.4.5" data-path="exam.html"><a href="exam.html#вариант-5-1"><i class="fa fa-check"></i><b>15.4.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.4.6" data-path="exam.html"><a href="exam.html#вариант-6-1"><i class="fa fa-check"></i><b>15.4.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="exam.html"><a href="exam.html#задание-5"><i class="fa fa-check"></i><b>15.5</b> Задание 5</a></li>
+<li class="chapter" data-level="15.6" data-path="exam.html"><a href="exam.html#задание-6"><i class="fa fa-check"></i><b>15.6</b> Задание 6</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Геоинформатика и геоинформационные системы</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basics" class="section level1" number="3">
+<h1><span class="header-section-number"> 3</span> Начало работы</h1>
+<div id="add-object" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Добавление объектов на карту</h2>
+<p>В качестве первой работы построим и оформим карту супермаркетов в городе Санкт-Петербург.</p>
+<p>Исходные данные для работы можно скачать по ссылке <a href="https://drive.google.com/file/d/1LTFghQlrXeFDh5BI-hiZRBPbr6rzc7uw/view?usp=sharing">здесь</a></p>
+<p>Исходные данные были взяты с OpenStreetMap и сохранены в виде таблицы со следующими столбцами:</p>
+<ul>
+<li><p>brand - название сети супермакетов;</p></li>
+<li><p>lat - широта, градусы;</p></li>
+<li><p>lon - долгота, градусы.</p></li>
+</ul>
+<p>Для начала работы нужно запустить программу QGIS. После первого запуска вы увидите графический пользовательский интерфейс.</p>
+<p><img src="images/1-01.PNG" /></p>
+<p>В верхней части окна расположена строка меню и панель инструментов, в левой части сверху окно Браузер, в котором отображаются все доступные источники данных для работы, в левой нижней части окно Слои, где будут отображаться слои, загруженные в проект.</p>
+<blockquote>
+<p>Проект - совокупность всех слоев, стилей, макетов и прочего. Проекты позволяют сохранить конкретный сеанс работы.</p>
+</blockquote>
+<p>Для того, чтобы добавить данные на карту воспользуемся строкой меню: <strong>Слой — Добавить слой — Добавить слой из текста с разделителями.</strong></p>
+<p><img src="images/2-01.png" /></p>
+<p>После этого в диалоговом окне нужно задать параметры добавления объектов: имя слоя, вид разделителя, названия атрибутов, координаты точек, систему координат и прочее.</p>
+<p><img src="images/3-01.PNG" /></p>
+<p>В нашем случае в качестве координат точек выступают колонки <em>lat, lon</em>, а система координат необходима <code>EPSG:4326 - WGS 84</code> (про системы координат в ГИС есть отдельный раздел <a href="crs.html#crs">4</a>).</p>
+<p>После добавления на карте должны появиться точки объектов</p>
+<p><img src="images/4-01.PNG" /></p>
+</div>
+<div id="tiles" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Добавление подложки</h2>
+<p>Для более понятной карты добавим на карту подложку OpenStreetMap. Это можно сделать двумя способами: через панель <em>Браузер</em> и с помощью плагина <em>QuickMapServices</em>.</p>
+<p>Для того, чтобы добавить подложку из панели Браузер достаточно просто найти в ней <code>XYZTiles</code>, щелкнуть два раза, после чего раскроется список доступных тайлов (по умолчанию доступны только стандартные тайлы OpenStreetMap).</p>
+<p><img src="images/5-01.PNG" /></p>
+<blockquote>
+<p><strong>Тайлы или тайловые карты</strong> - это карта, отображаемая в веб-браузере путем бесшовного соединения десятков индивидуально запрашиваемых файлов изображений или векторных данных.</p>
+<p>Google Maps был одним из первых крупных картографических сайтов, использовавших эту технику. В первых плиточных веб-картах использовались растровые плитки, до появления векторных плиток.</p>
+</blockquote>
+<p>Возможно нужно будет перетащить в перечне слоев подложку под слой с супермаркетами, чтобы она не перекрывала наши точки.</p>
+<blockquote>
+<p>По умолчанию слои отрисовываются в том порядке, в котором они расположены в перечне слоев. То есть слои, находящиеся в списке выше, будут отображаться поверх других слоев</p>
+</blockquote>
+<p>Чтобы добавить подложку через плагин QuickMapServices нужно сначала его установить. Установка плагинов осуществляется через строку меню: <strong>Модули — Управление и установка модулей</strong>.</p>
+<p>В открывшемся окне через строку поиска нужно будет найти модуль по его названию и установить.</p>
+<p><img src="images/6-01.PNG" /></p>
+<p>После установки на панели инструментов появятся 3 значка <img src="images/7.PNG" width="99" />.</p>
+<p>Далее можно добавить стандартную подложку OpenStreetMap</p>
+<p><img src="images/8.png" /></p>
+<p>Установленный плагин позволяет добавлять не только стандартную подложку OSM, но и целый ряд других.</p>
+</div>
+<div id="reproject-fly" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Настройка карты</h2>
+<p>Глядя на нашу карту, мы заметим, что изображение выглядит непривычным для нас, как бы наклоненным. Это объясняется немного непривычной системой координат, в которой у нас создан проект и слой. Для изменения отображения карты, мы можем выполнить “перепроецирование на лету”.</p>
+<p>Для того, чтобы это сделать, необходимо в правом нижнем углу окна программы найти кнопку <img src="images/9.png" /></p>
+<p>После ее нажатия открывается диалоговое окно с настройками системы координат</p>
+<p><img src="images/10.PNG" /></p>
+<p>Для того, чтобы сделать карту более привычной нам на вид выберем систему координат <code>EPSG:3857 - WGS 84 / Pseudo Mercator</code>. После изменения системы координат изображение должно “выровняться”.</p>
+<p><img src="images/11.PNG" /></p>
+<blockquote>
+<p>Важно помнить, что перепроецировании на лету не изменяются системы координат слоев, меняется только их отображение на экране.</p>
+</blockquote>
+<div id="style-basics" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Настройка стиля</h3>
+<p>Настроим стиль слоя. Для этого нужно открыть окно настроек либо двойным кликом левой кнопки мыши по названию слоя, либо в контекстном меню (открывается кликом правой кнопки мыши по названию слоя) <em>Свойства</em>.</p>
+<p><img src="images/12.PNG" /></p>
+<p>При добавлении объектов они обозначаются простыми символами (<em>Обычный знак</em>), но возможен выбор других вариантов отображения объектов.</p>
+<p><img src="images/13.png" /></p>
+<ul>
+<li><p>уникальные значения - как правило, используется для категориальной или дискретной переменной с небольшим количеством значений;</p></li>
+<li><p>градуированный знак - для задания символа в зависимости от числовой переменной, также позволяет использовать выражения;</p></li>
+<li><p>правила - позволяет задавать символику на основе выражения;</p></li>
+<li><p>смещение точек - позволяет показать все точки слоя, даже если они находятся в одном месте, возможны варианты смещения по кругу, концетрическим кругам и сетке;</p></li>
+<li><p>point cluster - собирает близко расположенные точечные объекты в один;</p></li>
+<li><p>создание теплокарт - создает динамическую карту плотности распределения объектов.</p></li>
+</ul>
+<p>Для линейных и площадных объектов будут немного другие варианты, которые будут рассмотрены далее в курсе.</p>
+<div id="простые-символы" class="section level4" number="3.3.1.1">
+<h4><span class="header-section-number">3.3.1.1</span> Простые символы</h4>
+<p>В нашем датасете есть фактически всего один атрибут, по которому мы можем настроить стиль символов - <em>brand</em>. Так как это категориальная переменная, следует использовать тип символа <strong>Уникальные значения</strong>. После выбора типа символа нужно выбрать <strong>Значение</strong> (атрибут, по которому будет задаваться символ) и нажать кнопку <strong>Классифицировать</strong>. После этого будет осуществлена автоматическая классификация по заданному атрибуту и отобразиться легенда слоя.</p>
+<p><img src="images/14.PNG" /></p>
+<p>При необходимости далее можно</p>
+<ul>
+<li>выбрать нужную палитру или создать свою</li>
+</ul>
+<p><img src="images/15.png" /></p>
+<ul>
+<li>настроить символ - выбрать его размер, прозрачность, вращение, вид символа</li>
+</ul>
+<p><img src="images/16.png" /></p>
+<ul>
+<li>объединить или разъединить категории</li>
+</ul>
+<p><img src="images/17.png" /></p>
+<ul>
+<li>поменять название, под которым категория будет отображаться в легенде, для чего нужно дважды щелкнуть мышкой в конкретной категории в графе <strong>Легенда</strong> и ввести нужное название</li>
+</ul>
+<p>Кроме того, можно изменять цвет и вид символа для отдельных категорий. Для этого достаточно дважды щелкнуть мышкой напротив символа конкретной категории.</p>
+<p>После настройки стиля слоя под его названием появляется легенда, с помощью которой можно делать отдельные категории невидимыми (для этого достаточно убрать галочку в чекбоксе напротив названия категории).</p>
+<p><img src="images/18.PNG" /></p>
+<blockquote>
+<p><strong>Задание</strong>: самостоятельно настроить цвет и вид символов на карте по своему усмотрению</p>
+</blockquote>
+</div>
+<div id="кластеры" class="section level4" number="3.3.1.2">
+<h4><span class="header-section-number">3.3.1.2</span> Кластеры</h4>
+<p>Для того, чтобы не перегружать карту объектами, можно настроить стиль точечного слоя в виде кластеров. В этом случае близко расположенные точки будут собираться в группы-кластеры.</p>
+<p>Продублируем наш исходный слой</p>
+<p><img src="images/19.png" /></p>
+<p>После этого отключим видимость ранее исходного слоя и включим слой дубликат (видимость слоев включается и отключается простановкой галочки в чекбоксе).</p>
+<p>Для настройки стиля откроем свойства слоя дубликата и выберем тип знака <strong>Point cluster</strong>.</p>
+<p><img src="images/20.PNG" /></p>
+<p>Здесь можно настроить символ кластера, рендерер и расстояние, на котором объекты будут группироваться друг с другом. При этом кластеры будут динамически пересчитываться при увеличении и уменьшении масштаба карты.</p>
+<p>Рендерер в данном случае - это тоже настройка символа кластера, похожая на настройку простых точечных символов.</p>
+<p><img src="images/21.png" /></p>
+<p>В нашем случае рендерер унаследовал настройку по уникальным значениям от простого символа, но при необходимости можно дополнительно что-то скорректировать в <strong>Renderer settings</strong>.</p>
+<p><img src="images/22.PNG" /></p>
+<p>Настройка символа происходит аналогично настройке простого маркера.</p>
+<p><img src="images/23.PNG" /></p>
+<p>В результате будет получена подобная карта.</p>
+<p><img src="images/24.PNG" /></p>
+<p><img src="images/25.PNG" /></p>
+</div>
+<div id="тепловая-карта" class="section level4" number="3.3.1.3">
+<h4><span class="header-section-number">3.3.1.3</span> Тепловая карта</h4>
+<p>Еще раз продублируем слой, чтобы рассмотреть создание тепловой карты.</p>
+<p>Откроем настройки продублированного слоя и выберем стиль <strong>Создание теплокарт</strong>.</p>
+<p><img src="images/26.PNG" /></p>
+<p>Вы можете задать радиус тепловой карты в миллиметрах, точках, пикселях, единицах карты или дюймах, выбрать и отредактировать цветовую рампу для стиля тепловой карты и использовать ползунок для выбора компромисса между скоростью и качеством рендеринга. Вы также можете определить предел максимального значения и придать вес точкам с помощью поля или выражения. При добавлении или удалении объекта рендерер тепловой карты автоматически обновляет стиль тепловой карты.</p>
+<blockquote>
+<p>Главный недостаток тепловых карт в том, что они не дают четких значений плотности объектов, поэтому подходят только для отображения общих паттернов.</p>
+</blockquote>
+<blockquote>
+<p><strong>Задание:</strong> подобрать подходящий градиент и настроить тепловую карту.</p>
+</blockquote>
+<p>В результате создания тепловой карты должен быть получен подобный результат.</p>
+<p><img src="images/27.PNG" /></p>
+<p><img src="images/28.PNG" /></p>
+</div>
+</div>
+</div>
+<div id="layout" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Оформление карты</h2>
+<div id="создание-макета" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Создание макета</h3>
+<p>Просто сохранить карту в виде изображения можно через строку меню <strong>Проект — Импорт/Экспорт — Экспортировать карту как изображение (Экспортировать карту в PDF)</strong>.</p>
+<p><img src="images/29.png" /></p>
+<p>В открывшемся окне можно настроить масштаб, охват карты, разрешение, аннотации и прочее. Но такой метод не позволяет сделать некоторые точные настройки экспорта.</p>
+<p><img src="images/30.PNG" /></p>
+<p>Некоторые настройки оформления можно добавить через пункт меню <strong>Вид — Оформление</strong>.</p>
+<p><img src="images/31.png" /></p>
+<p>Более предпочтительным методом публикации являются макеты, которые сохраняются как часть проекта и позволяют кастомизировать результат публикации. Создание макета происходит через строку меню <strong>Проект — Создать макет</strong>.</p>
+<p><img src="images/32.png" /></p>
+<p><img src="images/33.PNG" /></p>
+<p>После создания макета открывается отдельное окно, в котором происходит настройка карты для публикации.</p>
+<p><img src="images/34.PNG" /></p>
+<p>По левому краю расположены значки добавления различных элементов оформления на макет, в правой части окна сверху будут перечислены добавленные на макет элементы, а в правой нижней части окна будут отображаться свойства элементов. В центральной части расположен лист, на котором будет размещаться карта и добавленные на нее элементы.</p>
+</div>
+<div id="настройка-макета" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Настройка макета</h3>
+<div id="параметры-листа" class="section level4" number="3.4.2.1">
+<h4><span class="header-section-number">3.4.2.1</span> Параметры листа</h4>
+<p>Чтобы настроить размер и ориентацию листа, нужно открыть его параметры. Параметры листа открываются в контекстном меню, которое появляется после нажатия правой кнопкой мыши на лист.</p>
+<p><img src="images/35.png" /></p>
+<p>После этого в правой части окна появятся настройки параметров листа.</p>
+<p><img src="images/36.PNG" /></p>
+<p>Добавить новый лист в макет можно кнопкой <strong>Добавить листы</strong>.</p>
+</div>
+<div id="добавление-карты" class="section level4" number="3.4.2.2">
+<h4><span class="header-section-number">3.4.2.2</span> Добавление карты</h4>
+<p>Добавление карты на лист осуществляется инструментом <strong>Добавить Карта</strong> на левой панели окна макета <img src="images/37.PNG" /></p>
+<p>После выбора этого инструмента нужно щеклнуть на любом месте листа, чтобы карта была добавлена. После этого открывается диалоговое окно, в котором можно настроить положение и размер элемента (не обязательно, так как это положение и размер можно скорректировать вручную уже на листе после добавления).</p>
+<p><img src="images/38.PNG" /></p>
+<p>После добавления карта должна появиться на листе, а в правой части окна появятся ее настройки.</p>
+<p><img src="images/39.PNG" /></p>
+<p>Изменить размер элемента можно просто потянув за один из белых квадратиков по периметру элемента. При этом можно увидеть, что сразу меняется масштаб и границы карты.</p>
+<p><img src="images/40.PNG" /></p>
+<blockquote>
+<p>На добавленной карте отображаются те слои, которые в данный момент являются видимыми в основном окне программы.</p>
+</blockquote>
+<p>Основные настройки элемента:</p>
+<ul>
+<li><p>масштаб - рассчитывается в зависимости от того, какая область попадает в элемент, при необходимости может быть введен нужный знаменатель масштаба;</p></li>
+<li><p>вращение - карту можно развернуть на листе под любым углом;</p></li>
+<li><p>система координат - система координат, в которой карта отображается на макете, по умолчанию система координат проекта;</p></li>
+<li><p>заблокировать слои - так как на карте отображаются видимые в конкретный момент времени слои, то она будет обновляться и меняться после включения/отключения/добавления новых слоев, поэтому можно выбрать нужные для отображения слои, сделать их видимыми в основном окне, потом заблокировать слои на макете и содержание карты больше не будет меняться; при необходимости блокировку можно снять;</p></li>
+<li><p>границы помогают задать охват карты.</p></li>
+</ul>
+</div>
+<div id="масштабная-линейка" class="section level4" number="3.4.2.3">
+<h4><span class="header-section-number">3.4.2.3</span> Масштабная линейка</h4>
+<p>Для отображения масштаба карты на нее нужно добавить масштабную линейку (линейный масштаб) с помощью инструмента <strong>Добавить Масштабная линейка</strong> <img src="images/41.PNG" width="35" height="30" /></p>
+<p>Процесс добавлени происходит аналогично добавлению карты на лист.</p>
+<p><img src="images/42.PNG" /></p>
+<p>Основные настройки масштабной линейки:</p>
+<ul>
+<li><p>карта - то, для какого элемента карты добавляется линейка (в нашем случае всего один элемент карты, если их несколько можно сделать выбор);</p></li>
+<li><p>стиль линейки</p></li>
+</ul>
+<p><img src="images/43.png" /></p>
+<ul>
+<li><p>единицы масштабной линейки - единицы измерения на линейном масштабе;</p></li>
+<li><p>множитель единиц масштабной линейки - во сколько раз уменьшить значения на масштабной линейке;</p></li>
+<li><p>подпись единиц измерения;</p></li>
+<li><p>number format - формат чисел на линейном масштабе;</p></li>
+</ul>
+<p><img src="images/44.PNG" /></p>
+<ul>
+<li><p>сегменты - количество сегментов слева от нуля и справа от нуля;</p></li>
+<li><p>фиксированная ширина - размер сегмента в единицах измерения карты;</p></li>
+<li><p>зафиксировать длину сегмента - размер сегментов линейного масштаба в единицах измерения листа.</p></li>
+</ul>
+</div>
+<div id="легенда" class="section level4" number="3.4.2.4">
+<h4><span class="header-section-number">3.4.2.4</span> Легенда</h4>
+<p>Добавим на карту легенду, с помощью кнопки Добавить Легенда <img src="images/45.PNG" />.</p>
+<p><img src="images/46.PNG" /></p>
+<p>По умолчанию на легенду добавляются все слои, которые есть в вашем проекте. Чтобы в легенде отображались только видимые слои, нужно поставить галочку в чекбоксе <strong>Only show items inside linked map</strong>.</p>
+<p>Названия слоев и категорий в легенде отображаются также, как и в основном окне программы, поэтому, чтобы кастомизировать содержание легенды, нужно убрать галочку напротив функции <strong>Auto update</strong> и после этого осуществить необходимые настройки.</p>
+<blockquote>
+<p><strong>Задание:</strong> сделать макет из трех листов, на одном из которых будет карта магазинов в виде простых символов, на втором - карта кластеров, на третьем - тепловая карта.</p>
+</blockquote>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="crs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

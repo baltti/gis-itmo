@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 8 Базовые операции пространственного анализа | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 8 Базовые операции пространственного анализа | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 8 Базовые операции пространственного анализа | Геоинформатика и геоинформационные системы" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 8 Базовые операции пространственного анализа | Геоинформатика и геоинформационные системы" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2022-02-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="styles-import.html"/>
+<link rel="next" href="visualisation.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Геоинформатика и геоинформационные системы</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#add-object"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#tiles"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#reproject-fly"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#layout"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
+<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
+<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
+<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#buffer"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
+<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
+<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#grid"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
+<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>9</b> Методы представления географических данных</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="visualisation.html"><a href="visualisation.html#основные-принципы-визуализации-про-которые-стоит-помнить"><i class="fa fa-check"></i><b>9.0.1</b> Основные принципы визуализации, про которые стоит помнить</a></li>
+<li class="chapter" data-level="9.1" data-path="visualisation.html"><a href="visualisation.html#пропорциональные-символы-bubble-map"><i class="fa fa-check"></i><b>9.1</b> Пропорциональные символы (bubble map)</a></li>
+<li class="chapter" data-level="9.2" data-path="visualisation.html"><a href="visualisation.html#карта-плотности-точек-dot-density"><i class="fa fa-check"></i><b>9.2</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="9.3" data-path="visualisation.html"><a href="visualisation.html#картограмма-choropleth"><i class="fa fa-check"></i><b>9.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
+<li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
+<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
+<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
+<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html"><i class="fa fa-check"></i><b>10</b> Создание различных типов карт в QGIS</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#исходные-данные"><i class="fa fa-check"></i><b>10.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="10.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#пропорциональные-символы-bubble-map-1"><i class="fa fa-check"></i><b>10.2</b> Пропорциональные символы (bubble map)</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-1-через-дополнительный-слой-знака"><i class="fa fa-check"></i><b>10.2.1</b> Способ 1 (через дополнительный слой знака)</a></li>
+<li class="chapter" data-level="10.2.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-2-через-круговую-диаграмму"><i class="fa fa-check"></i><b>10.2.2</b> Способ 2 (через круговую диаграмму)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#картограмма-choropleth-1"><i class="fa fa-check"></i><b>10.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="10.4" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-плотности-точек-dot-density-1"><i class="fa fa-check"></i><b>10.4</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="10.5" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#анаморфная-карта-cartogram-1"><i class="fa fa-check"></i><b>10.5</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="10.6" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-с-одновременным-отображением-двух-переменных-bivariate-map"><i class="fa fa-check"></i><b>10.6</b> Карта с одновременным отображением двух переменных (bivariate map)</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="datawrapper.html"><a href="datawrapper.html"><i class="fa fa-check"></i><b>11</b> Создание карт с помощью сервиса Datawrapper</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="datawrapper.html"><a href="datawrapper.html#choropleth-datawrapper"><i class="fa fa-check"></i><b>11.1</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="11.2" data-path="datawrapper.html"><a href="datawrapper.html#плиточная-карта"><i class="fa fa-check"></i><b>11.2</b> Плиточная карта</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>12</b> Векторизация</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="vectorisation.html"><a href="vectorisation.html#геопривязка-растра"><i class="fa fa-check"></i><b>12.1</b> Геопривязка растра</a></li>
+<li class="chapter" data-level="12.2" data-path="vectorisation.html"><a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов"><i class="fa fa-check"></i><b>12.2</b> Создание нового слоя и добавление в него объектов</a></li>
+<li class="chapter" data-level="12.3" data-path="vectorisation.html"><a href="vectorisation.html#прилипание-объектов"><i class="fa fa-check"></i><b>12.3</b> Прилипание объектов</a></li>
+<li class="chapter" data-level="12.4" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-объектов"><i class="fa fa-check"></i><b>12.4</b> Редактирование объектов</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vectorisation.html"><a href="vectorisation.html#перемещение-объекта"><i class="fa fa-check"></i><b>12.4.1</b> Перемещение объекта</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vectorisation.html"><a href="vectorisation.html#поворот-объекта"><i class="fa fa-check"></i><b>12.4.2</b> Поворот объекта</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vectorisation.html"><a href="vectorisation.html#преобразование-объекта-в-кольцо"><i class="fa fa-check"></i><b>12.4.3</b> Преобразование объекта в кольцо</a></li>
+<li class="chapter" data-level="12.4.4" data-path="vectorisation.html"><a href="vectorisation.html#разбивка-объекта"><i class="fa fa-check"></i><b>12.4.4</b> Разбивка объекта</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>13</b> Сетевой анализ</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#network-standart"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="network.html"><a href="network.html#область-обслуживания"><i class="fa fa-check"></i><b>13.1.1</b> Область обслуживания</a></li>
+<li class="chapter" data-level="13.1.2" data-path="network.html"><a href="network.html#поиск-кратчайшего-пути"><i class="fa fa-check"></i><b>13.1.2</b> Поиск кратчайшего пути</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="network.html"><a href="network.html#матрицы-источник-назначение"><i class="fa fa-check"></i><b>13.2.1</b> Матрицы источник-назначение</a></li>
+<li class="chapter" data-level="13.2.2" data-path="network.html"><a href="network.html#построение-изохрон"><i class="fa fa-check"></i><b>13.2.2</b> Построение изохрон</a></li>
+<li class="chapter" data-level="13.2.3" data-path="network.html"><a href="network.html#расчет-кратчайшего-пути-между-точками"><i class="fa fa-check"></i><b>13.2.3</b> Расчет кратчайшего пути между точками</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="relief.html"><a href="relief.html"><i class="fa fa-check"></i><b>14</b> Построение рельефа</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="relief.html"><a href="relief.html#добавление-цифровой-модели-рельефа"><i class="fa fa-check"></i><b>14.1</b> Добавление цифровой модели рельефа</a></li>
+<li class="chapter" data-level="14.2" data-path="relief.html"><a href="relief.html#теневой-рельефrelief-1"><i class="fa fa-check"></i><b>14.2</b> Теневой рельеф</a></li>
+<li class="chapter" data-level="14.3" data-path="relief.html"><a href="relief.html#крутизна-склоновrelief-3"><i class="fa fa-check"></i><b>14.3</b> Крутизна склонов</a></li>
+<li class="chapter" data-level="14.4" data-path="relief.html"><a href="relief.html#экспозиция-склоновrelief-4"><i class="fa fa-check"></i><b>14.4</b> Экспозиция склонов</a></li>
+<li class="chapter" data-level="14.5" data-path="relief.html"><a href="relief.html#расчет-неоднородности-рельефаrelief-5"><i class="fa fa-check"></i><b>14.5</b> Расчет неоднородности рельефа</a></li>
+<li class="chapter" data-level="14.6" data-path="relief.html"><a href="relief.html#построение-трехмерной-поверхности"><i class="fa fa-check"></i><b>14.6</b> Построение трехмерной поверхности</a></li>
+<li class="chapter" data-level="14.7" data-path="relief.html"><a href="relief.html#создание-горизонталей"><i class="fa fa-check"></i><b>14.7</b> Создание горизонталей</a></li>
+<li class="chapter" data-level="14.8" data-path="relief.html"><a href="relief.html#построение-профиля-местности"><i class="fa fa-check"></i><b>14.8</b> Построение профиля местности</a>
+<ul>
+<li class="chapter" data-level="14.8.1" data-path="relief.html"><a href="relief.html#плагин-profiletool"><i class="fa fa-check"></i><b>14.8.1</b> Плагин ProfileTool</a></li>
+<li class="chapter" data-level="14.8.2" data-path="relief.html"><a href="relief.html#средствами-панели-инструментов"><i class="fa fa-check"></i><b>14.8.2</b> Средствами панели инструментов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="exam.html"><a href="exam.html"><i class="fa fa-check"></i><b>15</b> Примеры заданий для зачета</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="exam.html"><a href="exam.html#задание-1"><i class="fa fa-check"></i><b>15.1</b> Задание 1</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="exam.html"><a href="exam.html#вариант-1"><i class="fa fa-check"></i><b>15.1.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.1.2" data-path="exam.html"><a href="exam.html#вариант-2"><i class="fa fa-check"></i><b>15.1.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.1.3" data-path="exam.html"><a href="exam.html#вариант-3"><i class="fa fa-check"></i><b>15.1.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.1.4" data-path="exam.html"><a href="exam.html#вариант-4"><i class="fa fa-check"></i><b>15.1.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.1.5" data-path="exam.html"><a href="exam.html#вариант-5"><i class="fa fa-check"></i><b>15.1.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.1.6" data-path="exam.html"><a href="exam.html#вариант-6"><i class="fa fa-check"></i><b>15.1.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="exam.html"><a href="exam.html#задание-2"><i class="fa fa-check"></i><b>15.2</b> Задание 2</a></li>
+<li class="chapter" data-level="15.3" data-path="exam.html"><a href="exam.html#задание-3"><i class="fa fa-check"></i><b>15.3</b> Задание 3</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="exam.html"><a href="exam.html#вариант-1-1"><i class="fa fa-check"></i><b>15.3.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.3.2" data-path="exam.html"><a href="exam.html#вариант-2-1"><i class="fa fa-check"></i><b>15.3.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.3.3" data-path="exam.html"><a href="exam.html#вариант-3-1"><i class="fa fa-check"></i><b>15.3.3</b> Вариант 3</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="exam.html"><a href="exam.html#задание-4"><i class="fa fa-check"></i><b>15.4</b> Задание 4</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="exam.html"><a href="exam.html#вариант-1-2"><i class="fa fa-check"></i><b>15.4.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.4.2" data-path="exam.html"><a href="exam.html#вариант-2-2"><i class="fa fa-check"></i><b>15.4.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.4.3" data-path="exam.html"><a href="exam.html#вариант-3-2"><i class="fa fa-check"></i><b>15.4.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.4.4" data-path="exam.html"><a href="exam.html#вариант-4-1"><i class="fa fa-check"></i><b>15.4.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.4.5" data-path="exam.html"><a href="exam.html#вариант-5-1"><i class="fa fa-check"></i><b>15.4.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.4.6" data-path="exam.html"><a href="exam.html#вариант-6-1"><i class="fa fa-check"></i><b>15.4.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="exam.html"><a href="exam.html#задание-5"><i class="fa fa-check"></i><b>15.5</b> Задание 5</a></li>
+<li class="chapter" data-level="15.6" data-path="exam.html"><a href="exam.html#задание-6"><i class="fa fa-check"></i><b>15.6</b> Задание 6</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Геоинформатика и геоинформационные системы</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="spatial-basics" class="section level1" number="8">
+<h1><span class="header-section-number"> 8</span> Базовые операции пространственного анализа</h1>
+<div id="фильтрация-данных" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Фильтрация данных</h2>
+<p>Фильтрация данных в слое позволяет оставить на карте только те объекты, которые соответствуют определенным условиям.</p>
+<p>Запрос при создании фильтра задается в виде sql-подобного выражения.</p>
+<p>Отфильтруем данные о супермаркетах. Сначала откроем окно настройки фильтра.</p>
+<p><img src="images/61.png" /></p>
+<blockquote>
+<p>Фильтры можно включать только для нередактируемых в данный момент слоев.</p>
+</blockquote>
+<p>Окно фильтра выглядит вот так.</p>
+<p><img src="images/62.PNG" /></p>
+<p>Введем нужное условие фильтрации (в нашем случае значение в поле brand не должно быть нулевым).</p>
+<p><img src="images/63.PNG" /></p>
+<p>После нажатия кнопки <strong>Проверить</strong>, должно отобразиться, сколько объектов получено в отфильтрованном слое.</p>
+<blockquote>
+<p>При фильтрации объекты не удаляются, а просто перестают отображатьтся на карте и в таблице атрибутов, работа ведется только с объектами, соответствующими условиям фильтрации.</p>
+<p>Фильтр можно отключить, открыв окно его настройки и нажав кнопку <strong>Очистить</strong>.</p>
+</blockquote>
+</div>
+<div id="определение-площадей-периметра-и-длин-линий" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Определение площадей, периметра и длин линий</h2>
+<p>Определить площадь и периметр площадных объектов можно с помощью функции добавления геометрических параметров объектов к атрибутивной таблице или с помощью <strong>Калькулятора полей</strong>.</p>
+<div id="добавление-атрибутов-геометрии" class="section level3" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Добавление атрибутов геометрии</h3>
+<p>Для того, чтобы добавить геометрические атрибуты слоя, нужно в строке меню выбрать <strong>Вектор — Обработка геометрии — Добавить атрибуты геометрии</strong>.</p>
+<p><img src="images/64.png" /></p>
+<p>После чего появится диалоговое окно настройки добавления атрибутов геометрии.</p>
+<p><img src="images/65.PNG" /></p>
+<p>Как можно заметить в результате выполнения этой операции будет создан новый слой, содержащий те же атрибуты, что и в исходном, плюс геометрические параметры объектов слоя (набор этих характеристик зависит от типа объектов в слое).</p>
+<p>Главный недостаток использования этого метода определения площадей, периметров и длин в том, что эти характеристики рассчитываются либо в системе координат слоя, либо в системе координат проекта, либо на эллипсе. То есть здесь не получится посчитать площадь, например, в квадратных метрах для слоя и проекта, у которых системы координат подразумевают использование градусных измерений.</p>
+<p><img src="images/66.png" /></p>
+<p>В результате в таблице атрибутов в конце появятся колонки с геометрическими параметрами объектов.</p>
+<p><img src="images/67.PNG" /></p>
+</div>
+<div id="расчет-через-калькулятор-полей" class="section level3" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Расчет через калькулятор полей</h3>
+<p>При использовании калькулятора полей не будет создаваться новый слой, а результаты расчетов будут записаны в новое поле в таблице атрибутов.</p>
+<p>Перед тем, как считать площадь нужно проверить единицы измерения, в которых будут проводиться расчеты. В строке меню нужно открыть настройки программы: <strong>Установки - Параметры</strong>. В открывшемся окне, нужно открыть <strong>Инструменты</strong>, где будут настройки инструментов измерения (<strong>Инструменты</strong>), в которых по умолчанию установлены единицы измерения расстояния - метры и единицы измерения - квадратные метры. При необходимости можно установить нужные единицы измерения.</p>
+<p><img src="images/68.PNG" /></p>
+<p>Если единицы измерения установлены правильные, то можно переходить к определению площади. Для этого нужно открыть таблицу атрибутов слоя.</p>
+<p>В таблице атрибутов нужно запустить <strong>Калькулятор полей</strong> <img src="images/69.PNG" /> (четвертый справа значок на панели инструментов).</p>
+<p>Далее нужно выбрать хотите ли вы записывать результат в новую колонку (поле) или внести в существующую. Мы запишем результаты в новое поле, для которого обязательно нужно указать имя и тип данных. Тип данных в данном случае нужен десятичное число с точностью (числом знаков после запятой) 2.</p>
+<p>В нижней части калькулятора слева окно, в котором будет отображаться выражение, по которому осуществляются расчеты, посередине приведены все функции, которые можно использовать при расчетах, а справа - краткая справка по выбранной функции.</p>
+<blockquote>
+<p>Для определения площади есть две функции <strong>$area</strong> и <strong>area()</strong>, входящие в группу <strong>Геометрия</strong>.</p>
+<p>Главная разница между ними в том, что функция <strong>$area</strong> рассчитывает площадь по эллипсоиду (за основу берется эллипсоид системы координат проекта; если для проекта не задан эллипсоид, то пдлощадь будет определяться на плоскости), а функция <strong>area()</strong> рассчитывает площадь на плоскости в системе координат слоя.</p>
+</blockquote>
+<p><img src="images/70.PNG" /></p>
+<p>После нажатия кнопки ОК, окно Калькулятора закроется, останется только окно таблицы атрибутов, в котором создана новая колонка с заданным именем и внесенными в нее значениями площади объектов.</p>
+<p>Периметр рассчитывается аналогично, но с помощью функций <strong>$perimeter</strong> или <strong>perimeter()</strong>.</p>
+<p><img src="images/71.PNG" /></p>
+<blockquote>
+<p>Результаты также могут записываться в уже существующее поле (<strong>Обновить существующее поле</strong>), но здесь важно помнить про тип данных в поле.</p>
+</blockquote>
+<p>Использования <strong>Калькулятора полей</strong> этим, конечно, не ограничивается: с его помощью можно осуществлять различные вычисления между атрибутами ваших объектов. Полный перечень функций <strong>Калькулятора полей</strong> с их описанием есть в <a href="https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/functions_list.html">официальной документации</a>.</p>
+</div>
+</div>
+<div id="buffer" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Буферные зоны</h2>
+<p>Для того, чтобы выполнять эту и последующие операции необходимо открыть панель инструментов анализа (<strong>Вид — Панели — Инструменты анализа</strong>).</p>
+<p><img src="images/72.png" /></p>
+<p>Панель появится в правой части окна.</p>
+<div class="figure">
+<img src="images/73.PNG" alt="" />
+<p class="caption">Панель инструментов анализа</p>
+</div>
+<p>Буферизация обычно создает две области: одна в пределах  указанного расстояния от выбранного объекта реального мира, другая - вне. Область, которая находится в пределах указанного расстояния называется буферная зона<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>.</p>
+<p>С помощью буферных зон может осуществляться построение радиусов обслуживания определенных объектов, радиусов распространения отдельных явлений, границ зон с особыми условиями использования территорий.</p>
+<blockquote>
+<p>Важно помнить, что размер буферной зоны может задаваться только в единицах измерения системы координат слоя.</p>
+<p>При необходимости слой нужно либо перепроецировать одноименным инструментом из панели инструментов анализа, либо просто пересохранить из контекстного меню слоя в нужной проекции командой <em>Сохранить как</em>.</p>
+</blockquote>
+<p>Предположим, что нам нужно определить, какие дома находятся в шаговой 5-минутной доступности от магазинов, а какие нет. Установим радиус обслуживания магазинов 500 метров (примерно 6 минут при средней скорости пешехода 5 км в час).</p>
+<p><img src="images/74.PNG" /></p>
+<p>В нашем случае мы строим буферы вокруг магазинов, для которых система координат подразумевает измерения  в градусах, поэтому размер буфера мы сможем задать только в градусах.</p>
+<p><img src="images/75.PNG" /></p>
+<p>Чтобы задавать размер буфера в метрах, нам нужно сначала перепроецировать исходный слой с помощью инструмента <strong>Перепроецировать слой</strong>. В качестве целевой системы координат можно выбрать системы <code>EPSG:3857</code>, результаты лучше сохранить в файл.</p>
+<p><img src="images/76.PNG" /></p>
+<p><img src="images/77.PNG" /></p>
+<blockquote>
+<p>Помните, что временные слои существуют только во время текущего сеанса работы, после закрытия программы, они удаляются.</p>
+</blockquote>
+<p>Новый перепроецированный слой будет отличаться от исходного только системой координат.</p>
+<p>Также перепроецирование слоя можно выполнить через команду <strong>Экспорт — Сохранить объекты как</strong> контекстного меню слоя.</p>
+<p><img src="images/78.png" /></p>
+<p><img src="images/79.PNG" /></p>
+<p>Далее мы можем создать буферы размером 500 метров для магазинов на основе перепроецированного слоя (результаты лучше сразу сохранить в файл).</p>
+<p>Параметры, которые задаются при создании буферных зон:</p>
+<ul>
+<li><p><em>расстояние</em> - радиус буферной зоны, ее размер;</p></li>
+<li><p><em>сегменты</em> - число сегментов для отрисовки закругленного конца буферной зоны;</p></li>
+<li><p><em>стиль конца</em> - как будут отрисовываться концы буферных зон для линейных объектов (доступные варианты: скругленное, плоские, квадратное);</p></li>
+<li><p><em>соединение сегментов</em> - как должны соединяться между собой части буферной зоны на поворотах линейных объектов (скругленное, острое или фаска);</p></li>
+<li><p><em>лимит острия</em> - размер острия при соединении (только для острого соединения сегментов);</p></li>
+<li><p><em>результат объединения</em> - если будет поставлена галочка в чекбоксе, то все буферные зоны будут объединены в один объект.</p></li>
+</ul>
+<p><img src="images/80.PNG" /></p>
+<p>В результате должно получиться что-то подобное</p>
+<div class="figure">
+<img src="images/81.PNG" alt="" />
+<p class="caption">Результат создания буферных зон</p>
+</div>
+</div>
+<div id="поиск-объектов-попадающих-в-радиус-обслуживания" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Поиск объектов, попадающих в радиус обслуживания</h2>
+<p>Далее мы можем осуществить поиск домов, которые попадают в заданные области обслуживания.</p>
+<p>Для поиска объектов есть группа инструментов <strong>Вектор — Выбор</strong>.</p>
+<p>Часть инструментов в ней начинается со слова Выбрать, а часть - Извлечь. Разница между ними в том, что в первом случае объекты просто выделяются в исходном слое, а во втором - объекты, соответствующие заданным условия, извлекаются в новый слой.</p>
+<p>Краткое описания инструментов:</p>
+<ul>
+<li><p><em>выбрать\извлечь по атрибуту</em> - поиск объектов по значению одного из атрибутов;</p></li>
+<li><p><em>выбрать\извлечь по выражению</em> - поиск объектов по значениям нескольких атрибутов одновременно;</p></li>
+<li><p><em>выбрать\извлечь по пространственному отношению</em> - поиск объектов по их расположению относительно объектов другого слоя;</p></li>
+<li><p><em>выбрать\извлечь случайно</em> - случайная выборка объектов из слоя (заданного числа объектов или заданного процента объектов);</p></li>
+<li><p><em>выбрать\извлечь случайно в подмножествах</em> - сначала слой разбивается по категориям по одному из атрибутов, потом из каждой категории извлекается заданное число или заданный процент объектов.</p></li>
+</ul>
+<p>Нам нужно определить, какие здания попадаются в буферные зоны, поэтому нужно воспользоваться <strong>выбрать\извлечь по пространственному отношению</strong>.</p>
+<p>Для выбора объектов нужно сначала указать в каком слое осуществляется поиск (слой со зданиями), геометрический оператор (как объекты расположены относительно объектов другого слоя) и слой для сравнения (буферные зоны). Геометрические операторы в данном случае лучше выбирать <em>Пересекает</em> и <em>В пределах</em>.</p>
+<p><img src="images/82.PNG" /></p>
+<p>В результате выбранные объекты будут выделены желтым цветом на карте.</p>
+<p><img src="images/83.PNG" /></p>
+<p>Функция <strong>Извлечь по пространственному отношению</strong> работает аналогично с почти теми же характеристиками, кроме того, что вы можете выбрать сохранить результаты во временный слой или в файл.</p>
+<p><img src="images/84.PNG" /></p>
+<p>В результате вы получите новый слой, в котором будут содержаться только те объекты, которые соответствуют заданному условию.</p>
+<p><img src="images/85.PNG" /></p>
+</div>
+<div id="оверлейные-операции" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Оверлейные операции</h2>
+<p>Оверлейные операции являются одним из основных способов пространственного анализа. Название этих операций произошло от слова overlay - наложение. Суть оверлейных операций состоит в том, что два слоя накладываются друг на друга, после чего осуществляется какая-то операция (разность, обрезка и т.п.) в результате чего создается результирующий новый слой.</p>
+<p>В QGIS можно выполнить следующие оверлейные операции: <em>Обрезать, Пересечение (Intersection), Объединение (Union), Симметричная разность (Symmetrical difference), Разность</em> <em>(Difference)</em>.</p>
+<p><img src="images/overlay_operations.png" /></p>
+<p>Эти операции также могут быть описаны логическими операторами.</p>
+<p><img src="images/logical%20operations.jpg" /></p>
+<p>Рассмотрим операции отдельно на примере наложения слоев с жилыми многоквартирными домами и буферными зонами супермаркетов.</p>
+<div class="figure">
+<img src="images/86.PNG" alt="" />
+<p class="caption">Исходный слой (многоквартирные жилые дома)</p>
+</div>
+<div class="figure">
+<img src="images/87.PNG" alt="" />
+<p class="caption">Оверлейный слой (буферные зоны вокруг супермаркетов)</p>
+</div>
+<p>При выполнении команды <strong><em>Пересечение</em></strong> в выходном слое содержатся только участки, в которых оба слоя пересекаются.</p>
+<p><img src="images/88.PNG" /></p>
+<p><img src="images/89.PNG" /></p>
+<p>Команда <strong><em>Объединение</em></strong> совмещает слои таким образом, что в выходном слое содержатся как участки пересечения, так и участки, принадлежащие только одному из слоев.</p>
+<blockquote>
+<p>Слой можно объединить с самим собой, в этом случае объекты слоя будут разделены на фрагменты из перекрывающихся частей и непересекающихся.</p>
+</blockquote>
+<p><img src="images/90.PNG" /></p>
+<p><img src="images/91.PNG" /></p>
+<p>Команда <strong><em>Симметричная разность</em></strong> оставляет в выходном слое только те участки, в которых исходные слои не пересекаются.</p>
+<p><img src="images/92.PNG" /></p>
+<p><img src="images/93.PNG" /></p>
+<p>Команда <strong><em>Обрезать</em></strong> совмещает слои таким образом, что в выходном слое содержатся только те участки, которые пересекаются со слоем отсечения. Принципиальное отличие этой команды от пересечения в том, что сохраняется исходная геометрия объектов, тогда как при пересечении исходные объекты дополнительно рассекаются объектами накладывающегося слоя.</p>
+<blockquote>
+<p>Главное отличие этой операции от Пересечения в том, что исходные объекты не разрезаются по границам объектов оверлейного слоя.</p>
+</blockquote>
+<p><img src="images/94.PNG" /></p>
+<p><img src="images/95.PNG" /></p>
+<p>Команда <strong><em>Разность</em></strong> совмещает слои таким образом, что в выходном слое содержатся только те участки, которые не пересекаются со слоем отсечения.</p>
+<p><img src="images/96.PNG" /></p>
+<p><img src="images/97.PNG" /></p>
+<blockquote>
+<p>Важно помнить, что результат оверлейных операций зависит от того, какой слой будет указан первым (будет исходным), а какой вторым (будет накладываться). В приведенных примерах везде слой буферных зон был исходным, а накладывался слой с сеткой.</p>
+</blockquote>
+<p>Все оверлейные операции находятся с панели инструментов в группе <strong>Вектор-Оверлей</strong><a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>.</p>
+</div>
+<div id="пространственное-объединение" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> Пространственное объединение</h2>
+<p>В ряде случаев возникает необходимость в том, чтобы объединить между собой таблицы атрибутов нескольких слоев. Эта задача может быть поставлена в нескольких вариациях:</p>
+<ul>
+<li><p>к атрибутивной таблице одного слоя нужно добавить атрибуты другого слоя, при этом в таблицах есть общее поле - <a href="https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-field-value"><strong>Соеднинить атрибуты по значению поля</strong></a> (геометрия объектов берется из первого слоя, атрибутивные таблицы объединяются по общему полю);</p></li>
+<li><p>к объектам одного слоя нужно присоединить атрибуты ближайших по местоположению объектов другого слоя - <a href="https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#qgisjoinbynearest"><strong>Соединить атрибуты по ближайшему</strong></a>;</p></li>
+<li><p>к объектам одного слоя нужно присоединить атрибуты объектов другого слоя, расположенных определенным образом по отношению к объектам первого слоя (с учетом геометрического предиката) - <a href="https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-location"><strong>Присоединить атрибуты по пространственному положению</strong></a>;</p></li>
+<li><p>к объектам одного слоя нужно присоединить рассчитанные статистические показатели на основе атрибутов объектов другого слоя, расположенных определенным образом по отношению к объектам первого слоя (с учетом геометрического предиката) - <a href="https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#qgisjoinbylocationsummary"><strong>Присоединить атрибуты по пространственному положению (сводка)</strong></a>.</p></li>
+</ul>
+<p>Все эти функции доступны в <strong>Панели инструментов анализ</strong>а в группе функций <strong>Вектор</strong>.</p>
+<p><img src="images/98.PNG" /></p>
+<p>Определим, в каких жилых многоквартирных домах есть сетевые супермаркеты, и добавим их названия в таблицу атрибутов слоя домов.</p>
+<p>Для этого нам необходимо воспользоваться функцией <strong>Присоединить атрибуты по пространственному положению</strong> в панели инструментов анализа.</p>
+<p><img src="images/99.PNG" /></p>
+<p>Параметры, задаваемые при выполнении:</p>
+<ul>
+<li><p><em>base layer</em> - слой, к объектам которого будут добавляться атрибуты;</p></li>
+<li><p><em>присоединить слой</em> - слой, из которого будут добавляться атрибуты;</p></li>
+<li><p><em>geometric predicate</em> - то, каким образом расположены относительно друг друга объекты базового и присоединяемого слоя;</p></li>
+<li><p><em>fields to add</em> (необязательно) - то, какие атрибуты вы хотите присоденить (если не выполнить здесь выбор конкретных атрибутов, будут добавлены все атрибуты присоединяемого слоя);</p></li>
+<li><p><em>тип объединения</em> - как будет создан результирующий слой, если будет выявлено несколько совпадений между присоединяемым слоем и исходным: для каждого совпадения будет создан свой объект, объекты будут создаваться только для первых совпадений или атрибуты будут присоединяться только при наибольшем наложении объектов между слоями;</p></li>
+</ul>
+<p><img src="images/100.png" /></p>
+<ul>
+<li><p><em>отменить записи, которые не могут быть объединены</em> - при выборе этой опции, те объекты базового слоя, для которых не нашлось совпадений их присоединяемого слоя будут удалены из результата;</p></li>
+<li><p><em>префикс присоединенного поля</em> (необязательно) - добавление префикса к присоединяемым полям для избежания дублирования названий и выделения новых полей;</p></li>
+<li><p><em>связанный слой</em> - куда будут записаны результаты;</p></li>
+<li><p><em>несоединимые объекты из первого слоя</em> (необязательно) - слой, куда будут вынесены объекты исходного слоя, для которых не нашлось совпадений в присоединяемом слое.</p></li>
+</ul>
+</div>
+<div id="агрегирование-объектов" class="section level2" number="8.7">
+<h2><span class="header-section-number">8.7</span> Агрегирование объектов</h2>
+<p>Рассчитаем плотность расположения супермаркетов в Санкт-Петербурге. Это осуществляется в 2 этапа:</p>
+<ol style="list-style-type: decimal">
+<li><p>построение сетки (грида);</p></li>
+<li><p>расчет плотности.</p></li>
+</ol>
+<div id="grid" class="section level3" number="8.7.1">
+<h3><span class="header-section-number">8.7.1</span> Построение сетки</h3>
+<p>Построение сетки осущестлвяется с помощью инструмента <strong>Create grid</strong> в панели инструментов анализа.</p>
+<p><img src="images/101.PNG" /></p>
+<p>Параметры, задаваемые при построении сетки:</p>
+<ul>
+<li><p><em>вид сетки</em> - из каких объектов будет состоять построенная сетка, доступные варианты:</p>
+<ul>
+<li><p>точка</p></li>
+<li><p>линия</p></li>
+<li><p>rectangle (прямоугольник)</p></li>
+<li><p>diamond (ромб)</p></li>
+<li><p>hexagon (шестиугольник)</p></li>
+</ul></li>
+<li><p><em>grid extent</em> - охват сетки может задаваться либо по охвату одного из слоев, либо по охвату видимой части карты, либо быть указан на карте;</p></li>
+<li><p><em>horisontal/vertical spacing</em> - размеры ячейки сетки по высоте и ширине;</p></li>
+<li><p><em>horisontal/vertical overlay</em> - наложение ячеек сетки друг на друга;</p></li>
+<li><p><em>grid CRS</em> - система координат полученной сетки.</p></li>
+</ul>
+<p><img src="images/102.PNG" /></p>
+<blockquote>
+<p>Важно помнить, что размер ячеек сетки всегда должен быть обоснован.</p>
+</blockquote>
+<p><img src="images/103.PNG" /></p>
+<p>В результате получим новый слой с сеткой</p>
+<p><img src="images/104.PNG" /></p>
+</div>
+<div id="расчет-плотности-объектов" class="section level3" number="8.7.2">
+<h3><span class="header-section-number">8.7.2</span> Расчет плотности объектов</h3>
+<p>Фактически для того, чтобы определить плотность объектов, нам нужно посчитать, сколько объектов попало в каждую ячейку сетки. Эта операция осуществляется как пространственное соединение с расчетом сводного показателя (<strong>Присоединить атрибуты по пространственному положению (сводка)</strong>).</p>
+<p><img src="images/105.PNG" /></p>
+<p>Параметры функции:</p>
+<ul>
+<li><p>исходный слой - тот слой, к которому будет выполняться присоединение атрибутов;</p></li>
+<li><p>связанный слой - слой, из которого будут браться атрибуты;</p></li>
+<li><p>геометрический предикат - взаимное расположение двух слоев;</p></li>
+<li><p>поля для суммирования (необязательно) - выбор атрибутов, которые необходимо присоединить;</p></li>
+<li><p>резюме для расчета (необязательно) - какие характеристики необходимо рассчитать в процессе операции (если не будут заданы конкретные характеристики, то будут рассчитаны все, которые возможно с учетом типов данных в связанном слое);</p></li>
+</ul>
+<p><img src="images/106.PNG" /></p>
+<ul>
+<li>отменить записи, которые не могут быть объединены - будут удалены объекты исходного слоя, для которых не нашлось совпадений в связанном слое.</li>
+</ul>
+<p>В результатет получаем новый слой с рассчитанным нужным параметром.</p>
+<div class="figure">
+<img src="images/107.PNG" alt="" />
+<p class="caption">Слой сетки на карте</p>
+</div>
+<div class="figure">
+<img src="images/108.PNG" alt="" />
+<p class="caption">Таблица атрибутов</p>
+</div>
+<p>Поля <em>id, left, top, right, bottom</em> были созданы при изначальном построении сетки, а в поле <em>brand_count</em> у нас содержится посчитанное число точек, попадающих в соотвествующую ячейку.</p>
+</div>
+<div id="настройка-стиля-объектов-в-зависимости-от-количественной-переменной" class="section level3" number="8.7.3">
+<h3><span class="header-section-number">8.7.3</span> Настройка стиля объектов в зависимости от количественной переменной</h3>
+<p>В разделе <a href="basics.html#style-basics">3.3.1</a> было немного упомянуто о настройках стиля слоя в зависимости от значений атрибута, но только на основе качественной характеристики. Рассмотрим настройку стиля объектов в зависимости от количественной переменной для слоя с плотностью супермаркетов.</p>
+<p>Для этого нужно открыть настройки стиля и выбрать тип символа <strong>Градуированный знак</strong>, после чего выбрать атрибут на основе которого будет задаваться стиль и осуществить дальнейшую настройку.</p>
+<p><img src="images/109.PNG" /></p>
+<blockquote>
+<p>Градуированный знак может задаваться только на основе числового атрибута</p>
+</blockquote>
+<p>Для того, чтобы появилась таблица с классификацией (легенда) нужно нажать кнопку <strong>Классифицировать</strong>.</p>
+<p>Для классификации можно менять тип разбивки на группы (<em>Мода</em>) и число классов. Самые широко применяемые методы классификации:</p>
+<ul>
+<li><p><em>естественные интервалы Natural breaks</em> (создают группы так, чтобы разница между ними была максимальной),</p></li>
+<li><p><em>равные интервалы</em> (весь интервал изменения показателя делится на равные отрезки),</p></li>
+<li><p><em>равное количество (квантиль)</em> (при этом типе классификации во всех группах будет одинаковое количество объектов).</p></li>
+</ul>
+<p>Чтобы лучше понять, как осуществилась разбивка на группы, можно перейти во вкладку <em>Гистограмма</em> и нажать <em>Load values</em>. После этого будет построен график распределения объектов  по величине показателя и показана разбивка на группы.</p>
+<p><img src="images/110.PNG" /></p>
+<p>Полученный результат вместе с легендой отображается на карте.</p>
+<p><img src="images/111.PNG" /></p>
+
+<hr />
+<hr />
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="15">
+<li id="fn15"><p>Vector Spatial Analysis (Buffers) <a href="https://docs.qgis.org/2.8/en/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.html" class="uri">https://docs.qgis.org/2.8/en/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.html</a><a href="spatial-basics.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p>Vector overlay <a href="https://docs.qgis.org/3.10/ru/docs/user_manual/processing_algs/qgis/vectoroverlay.html"><u>https://docs.qgis.org/3.10/ru/docs/user_manual/processing_algs/qgis/vectoroverlay.html</u></a><a href="spatial-basics.html#fnref16" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="styles-import.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="visualisation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

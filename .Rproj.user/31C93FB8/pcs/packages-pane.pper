@@ -1,7 +1,0 @@
-{
-    "installOptions": {
-        "installFromRepository": true,
-        "libraryPath": "C:/Users/baltt/AppData/Local/R/win-library/4.3",
-        "installDependencies": true
-    }
-}

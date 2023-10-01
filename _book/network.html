@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 13 Сетевой анализ | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 13 Сетевой анализ | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 13 Сетевой анализ | Геоинформатика и геоинформационные системы" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 13 Сетевой анализ | Геоинформатика и геоинформационные системы" />
+  
+  
+  
+
+<meta name="author" content="Балтыжакова Татьяна" />
+
+
+<meta name="date" content="2022-02-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vectorisation.html"/>
+<link rel="next" href="relief.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Геоинформатика и геоинформационные системы</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#add-object"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
+<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#tiles"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
+<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#reproject-fly"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#layout"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
+<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
+<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
+<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
+<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
+<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
+<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#buffer"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
+<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
+<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
+<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
+<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#grid"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
+<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
+<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>9</b> Методы представления географических данных</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="visualisation.html"><a href="visualisation.html#основные-принципы-визуализации-про-которые-стоит-помнить"><i class="fa fa-check"></i><b>9.0.1</b> Основные принципы визуализации, про которые стоит помнить</a></li>
+<li class="chapter" data-level="9.1" data-path="visualisation.html"><a href="visualisation.html#пропорциональные-символы-bubble-map"><i class="fa fa-check"></i><b>9.1</b> Пропорциональные символы (bubble map)</a></li>
+<li class="chapter" data-level="9.2" data-path="visualisation.html"><a href="visualisation.html#карта-плотности-точек-dot-density"><i class="fa fa-check"></i><b>9.2</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="9.3" data-path="visualisation.html"><a href="visualisation.html#картограмма-choropleth"><i class="fa fa-check"></i><b>9.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
+<li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
+<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
+<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
+<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
+<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html"><i class="fa fa-check"></i><b>10</b> Создание различных типов карт в QGIS</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#исходные-данные"><i class="fa fa-check"></i><b>10.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="10.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#пропорциональные-символы-bubble-map-1"><i class="fa fa-check"></i><b>10.2</b> Пропорциональные символы (bubble map)</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-1-через-дополнительный-слой-знака"><i class="fa fa-check"></i><b>10.2.1</b> Способ 1 (через дополнительный слой знака)</a></li>
+<li class="chapter" data-level="10.2.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-2-через-круговую-диаграмму"><i class="fa fa-check"></i><b>10.2.2</b> Способ 2 (через круговую диаграмму)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#картограмма-choropleth-1"><i class="fa fa-check"></i><b>10.3</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="10.4" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-плотности-точек-dot-density-1"><i class="fa fa-check"></i><b>10.4</b> Карта плотности точек (dot density)</a></li>
+<li class="chapter" data-level="10.5" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#анаморфная-карта-cartogram-1"><i class="fa fa-check"></i><b>10.5</b> Анаморфная карта (cartogram)</a></li>
+<li class="chapter" data-level="10.6" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-с-одновременным-отображением-двух-переменных-bivariate-map"><i class="fa fa-check"></i><b>10.6</b> Карта с одновременным отображением двух переменных (bivariate map)</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="datawrapper.html"><a href="datawrapper.html"><i class="fa fa-check"></i><b>11</b> Создание карт с помощью сервиса Datawrapper</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="datawrapper.html"><a href="datawrapper.html#choropleth-datawrapper"><i class="fa fa-check"></i><b>11.1</b> Картограмма (choropleth)</a></li>
+<li class="chapter" data-level="11.2" data-path="datawrapper.html"><a href="datawrapper.html#плиточная-карта"><i class="fa fa-check"></i><b>11.2</b> Плиточная карта</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>12</b> Векторизация</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="vectorisation.html"><a href="vectorisation.html#геопривязка-растра"><i class="fa fa-check"></i><b>12.1</b> Геопривязка растра</a></li>
+<li class="chapter" data-level="12.2" data-path="vectorisation.html"><a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов"><i class="fa fa-check"></i><b>12.2</b> Создание нового слоя и добавление в него объектов</a></li>
+<li class="chapter" data-level="12.3" data-path="vectorisation.html"><a href="vectorisation.html#прилипание-объектов"><i class="fa fa-check"></i><b>12.3</b> Прилипание объектов</a></li>
+<li class="chapter" data-level="12.4" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-объектов"><i class="fa fa-check"></i><b>12.4</b> Редактирование объектов</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="vectorisation.html"><a href="vectorisation.html#перемещение-объекта"><i class="fa fa-check"></i><b>12.4.1</b> Перемещение объекта</a></li>
+<li class="chapter" data-level="12.4.2" data-path="vectorisation.html"><a href="vectorisation.html#поворот-объекта"><i class="fa fa-check"></i><b>12.4.2</b> Поворот объекта</a></li>
+<li class="chapter" data-level="12.4.3" data-path="vectorisation.html"><a href="vectorisation.html#преобразование-объекта-в-кольцо"><i class="fa fa-check"></i><b>12.4.3</b> Преобразование объекта в кольцо</a></li>
+<li class="chapter" data-level="12.4.4" data-path="vectorisation.html"><a href="vectorisation.html#разбивка-объекта"><i class="fa fa-check"></i><b>12.4.4</b> Разбивка объекта</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>13</b> Сетевой анализ</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#network-standart"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="network.html"><a href="network.html#область-обслуживания"><i class="fa fa-check"></i><b>13.1.1</b> Область обслуживания</a></li>
+<li class="chapter" data-level="13.1.2" data-path="network.html"><a href="network.html#поиск-кратчайшего-пути"><i class="fa fa-check"></i><b>13.1.2</b> Поиск кратчайшего пути</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="network.html"><a href="network.html#матрицы-источник-назначение"><i class="fa fa-check"></i><b>13.2.1</b> Матрицы источник-назначение</a></li>
+<li class="chapter" data-level="13.2.2" data-path="network.html"><a href="network.html#построение-изохрон"><i class="fa fa-check"></i><b>13.2.2</b> Построение изохрон</a></li>
+<li class="chapter" data-level="13.2.3" data-path="network.html"><a href="network.html#расчет-кратчайшего-пути-между-точками"><i class="fa fa-check"></i><b>13.2.3</b> Расчет кратчайшего пути между точками</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="relief.html"><a href="relief.html"><i class="fa fa-check"></i><b>14</b> Построение рельефа</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="relief.html"><a href="relief.html#добавление-цифровой-модели-рельефа"><i class="fa fa-check"></i><b>14.1</b> Добавление цифровой модели рельефа</a></li>
+<li class="chapter" data-level="14.2" data-path="relief.html"><a href="relief.html#теневой-рельефrelief-1"><i class="fa fa-check"></i><b>14.2</b> Теневой рельеф</a></li>
+<li class="chapter" data-level="14.3" data-path="relief.html"><a href="relief.html#крутизна-склоновrelief-3"><i class="fa fa-check"></i><b>14.3</b> Крутизна склонов</a></li>
+<li class="chapter" data-level="14.4" data-path="relief.html"><a href="relief.html#экспозиция-склоновrelief-4"><i class="fa fa-check"></i><b>14.4</b> Экспозиция склонов</a></li>
+<li class="chapter" data-level="14.5" data-path="relief.html"><a href="relief.html#расчет-неоднородности-рельефаrelief-5"><i class="fa fa-check"></i><b>14.5</b> Расчет неоднородности рельефа</a></li>
+<li class="chapter" data-level="14.6" data-path="relief.html"><a href="relief.html#построение-трехмерной-поверхности"><i class="fa fa-check"></i><b>14.6</b> Построение трехмерной поверхности</a></li>
+<li class="chapter" data-level="14.7" data-path="relief.html"><a href="relief.html#создание-горизонталей"><i class="fa fa-check"></i><b>14.7</b> Создание горизонталей</a></li>
+<li class="chapter" data-level="14.8" data-path="relief.html"><a href="relief.html#построение-профиля-местности"><i class="fa fa-check"></i><b>14.8</b> Построение профиля местности</a>
+<ul>
+<li class="chapter" data-level="14.8.1" data-path="relief.html"><a href="relief.html#плагин-profiletool"><i class="fa fa-check"></i><b>14.8.1</b> Плагин ProfileTool</a></li>
+<li class="chapter" data-level="14.8.2" data-path="relief.html"><a href="relief.html#средствами-панели-инструментов"><i class="fa fa-check"></i><b>14.8.2</b> Средствами панели инструментов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="exam.html"><a href="exam.html"><i class="fa fa-check"></i><b>15</b> Примеры заданий для зачета</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="exam.html"><a href="exam.html#задание-1"><i class="fa fa-check"></i><b>15.1</b> Задание 1</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="exam.html"><a href="exam.html#вариант-1"><i class="fa fa-check"></i><b>15.1.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.1.2" data-path="exam.html"><a href="exam.html#вариант-2"><i class="fa fa-check"></i><b>15.1.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.1.3" data-path="exam.html"><a href="exam.html#вариант-3"><i class="fa fa-check"></i><b>15.1.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.1.4" data-path="exam.html"><a href="exam.html#вариант-4"><i class="fa fa-check"></i><b>15.1.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.1.5" data-path="exam.html"><a href="exam.html#вариант-5"><i class="fa fa-check"></i><b>15.1.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.1.6" data-path="exam.html"><a href="exam.html#вариант-6"><i class="fa fa-check"></i><b>15.1.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="exam.html"><a href="exam.html#задание-2"><i class="fa fa-check"></i><b>15.2</b> Задание 2</a></li>
+<li class="chapter" data-level="15.3" data-path="exam.html"><a href="exam.html#задание-3"><i class="fa fa-check"></i><b>15.3</b> Задание 3</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="exam.html"><a href="exam.html#вариант-1-1"><i class="fa fa-check"></i><b>15.3.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.3.2" data-path="exam.html"><a href="exam.html#вариант-2-1"><i class="fa fa-check"></i><b>15.3.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.3.3" data-path="exam.html"><a href="exam.html#вариант-3-1"><i class="fa fa-check"></i><b>15.3.3</b> Вариант 3</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="exam.html"><a href="exam.html#задание-4"><i class="fa fa-check"></i><b>15.4</b> Задание 4</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="exam.html"><a href="exam.html#вариант-1-2"><i class="fa fa-check"></i><b>15.4.1</b> Вариант 1</a></li>
+<li class="chapter" data-level="15.4.2" data-path="exam.html"><a href="exam.html#вариант-2-2"><i class="fa fa-check"></i><b>15.4.2</b> Вариант 2</a></li>
+<li class="chapter" data-level="15.4.3" data-path="exam.html"><a href="exam.html#вариант-3-2"><i class="fa fa-check"></i><b>15.4.3</b> Вариант 3</a></li>
+<li class="chapter" data-level="15.4.4" data-path="exam.html"><a href="exam.html#вариант-4-1"><i class="fa fa-check"></i><b>15.4.4</b> Вариант 4</a></li>
+<li class="chapter" data-level="15.4.5" data-path="exam.html"><a href="exam.html#вариант-5-1"><i class="fa fa-check"></i><b>15.4.5</b> Вариант 5</a></li>
+<li class="chapter" data-level="15.4.6" data-path="exam.html"><a href="exam.html#вариант-6-1"><i class="fa fa-check"></i><b>15.4.6</b> Вариант 6</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="exam.html"><a href="exam.html#задание-5"><i class="fa fa-check"></i><b>15.5</b> Задание 5</a></li>
+<li class="chapter" data-level="15.6" data-path="exam.html"><a href="exam.html#задание-6"><i class="fa fa-check"></i><b>15.6</b> Задание 6</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Геоинформатика и геоинформационные системы</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="network" class="section level1" number="13">
+<h1><span class="header-section-number"> 13</span> Сетевой анализ</h1>
+<p>Сетевой анализ построен на <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2">теории графов</a>.</p>
+<p>При использовании сетевого анализа улично-дорожная сеть рассматривается как набор узлов (перекрестков), которые соединены между собой ребрами (сегментами улиц или дорог между перекрестками). Передвижение по графу осуществляется только по ребрам, перемещение от ребра к ребру происходит через узлы.</p>
+<p>Граф может быть направленным (если по нему можно передвигаться только в определенных направлениях) или ненаправленным (по графу можно передвигаться в любом направлении).</p>
+<p>В ГИС сетевой анализ используется для решения двух основных задач: поиск кратчайшего пути и определение области обслуживания объекта.</p>
+<p>С сетевым анализом так или иначе сталкивались практически все: каждый раз, когда вы строите свой маршрут в навигационном приложении, для вас осуществляется сетевой анализ с учетом целого ряда параметров (характеристики улично-дорожной сети, скорость передвижения, наличие ограничений в передвиженни, наличие пробок и прочие).</p>
+<p>Для осуществления сетевого анализа существует большое число сервисов и плагинов, а также могут применяться <a href="https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/networkanalysis.html">стандартные средства QGIS</a>.</p>
+<blockquote>
+<p>Главный недостаток использования сторонних сервисов для задач сетевого анализа в том, что у вас нет конкретной информации о параметрах улично-дорожной сети, тогда как при использовании стандартных инструментов или инструментов, где вы сами задаете параметры сети, вы четко знаете как и каким образом осуществляется передвижение по исследуемой территории.</p>
+</blockquote>
+<p>В качестве исходных данных для работы можно использовать скачанный с overpass-turbo.eu слой с улицами (городские и межрайонные магистрали), который лежит по <a href="https://drive.google.com/file/d/1mr0PbLWYntw37m7doOD5BFgPl8nZpIj3/view?usp=sharing">ссылке</a> и слой с расположением супермаркетов, который доступен по <a href="https://drive.google.com/file/d/1LTFghQlrXeFDh5BI-hiZRBPbr6rzc7uw/view?usp=sharing">ссылке</a> (как открыть табличные данные в QGIS описано в <a href="basics.html#add-object">3.1</a>)</p>
+<p>Либо можно самостоятельно скачать данные с overpass-turbo.eu (как это сделать было рассмотрено в <a href="osm.html#osm">6</a>)</p>
+<div id="network-standart" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> Сетевой анализ стандартными средствами QGIS</h2>
+<p>Для сетевого анализа в <strong>Панели инструментов анализа</strong> есть отдельный пункт.</p>
+<p><img src="images/186.PNG" /></p>
+<p>Основные инструменты здесь - это <strong>Область обслуживания</strong> и <strong>Поиск кратчайшего пути</strong>.</p>
+<div id="область-обслуживания" class="section level3" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> Область обслуживания</h3>
+<p>Доступно два варианта построения области обслуживания: от слоя (то есть от объектов точечного слоя) и от точки (то есть от одной заданной пользователем точки).</p>
+<p>При построении области обслуживания от слоя самыми важными характеристиками являются:</p>
+<ul>
+<li><p>слой, отображающий улично-дорожную сеть;</p></li>
+<li><p>слой, содержащий точечные объекты, для которых строится область обслуживания (могут использоваться не все объекты слоя, а только выделенные);</p></li>
+<li><p>travel cost - расстояние или время для определения области обслуживания. Расстояние задается, если выбран кратчайший путь, время (в часах), если выбран наиболее быстрый путь.</p></li>
+</ul>
+<p><img src="images/187.PNG" /></p>
+<p>В качестве дополнительных параметров могут быть заданы:</p>
+<ul>
+<li><p>поле направления - поле, в котором указано, в каком направлении можно передвигаться по определенному сегменту (в случае, если есть информация о том, какие улицы являются одно- или двухсторонними и в каком направлении по ним можно передвигаться);</p></li>
+<li><p>значение для прямого направления, для обратного направления и для обоих направлений - какие значения в этом поле соответствуют каким направлениям;</p></li>
+<li><p>направление по умолчанию - если граф является направленным и по нему можно передвигаться только в одном из направлений (по умолчанию по графу можно передвигаться в обоих направлениях);</p></li>
+<li><p>поле скорости - поле, в котором указана скорость передвижения по конкретным сегментам сети;</p></li>
+<li><p>скорость по умолчанию - скорость, с которой можно передвигаться по сети, если не задано поле скорости со значениями для каждого сегмента.</p></li>
+</ul>
+<p>В результате выполнения могут быть получены два варианта результата: слой с линиями, в который входят сегменты сети, попадающие в область обслуживания, и слой с узлами, в который включаются все узлы сети, попадающие в область обслуживания и узлы, показывающие крайние точки области обслуживания (по умолчанию этот слой пропускается).</p>
+<p><img src="images/188.PNG" /></p>
+<p><img src="images/189.PNG" /></p>
+<p>Область обслуживания для точки рассчитывается аналогично за исключением того, что вместо слоя нужно указать положение исходной точки. Это можно сделать введя ее координаты или просто указав на карте.</p>
+</div>
+<div id="поиск-кратчайшего-пути" class="section level3" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Поиск кратчайшего пути</h3>
+<p>Поиск кратчайшего пути доступен в нескольких вариантах:</p>
+<ul>
+<li><p>от слоя к точке - от объектов точечного слоя (могут использоваться только выделенные объекты) к заданной точке;</p></li>
+<li><p>от точки к точке - поиск пути между заданными точками;</p></li>
+<li><p>от точки к слою - от заданной точки к объектам точечного слоя (могут использоваться только выделенные объекты).</p></li>
+</ul>
+<p>Параметры инструмента аналогичны параметрам области обслуживания, с некоторыми особенностями.</p>
+<p><img src="images/190.PNG" /></p>
+<blockquote>
+<p>Следует помнить, что при поиске кратчайшего пути не всегда существует путь между двумя точками.</p>
+</blockquote>
+<p>В результате выполнения функции будет получен слой с линейными объектами, которые показывают найденные кратчайшие пути.</p>
+</div>
+</div>
+<div id="сетевой-анализ-с-помощью-плагина-qneat3" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> Сетевой анализ с помощью плагина QNEAT3</h2>
+<p>Один из плагинов, который использует для сетевого анализа задаваемый пользователем граф улично-дорожной сети - это плагин <strong>QNEAT3 - QGIS network analysis toolbox</strong>. После установки плагина (как устанавливать плагины см. <a href="basics.html#tiles">3.2</a> он должен появиться в панели инструментов анализа.</p>
+<p>Основные функции этого плагина:</p>
+<ul>
+<li><p>построение матриц времени - origin-destination matrix;</p></li>
+<li><p>построение изохрон в нескольких вариациях;</p></li>
+<li><p>поиск кратчайшего пути между точками.</p></li>
+</ul>
+<div id="матрицы-источник-назначение" class="section level3" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Матрицы источник-назначение</h3>
+<blockquote>
+<p>Матрица источник-назначение (origin-destination matrix) - это матрица, в которой исходные точки расположены рядами, а точки назначения столбцами, на пересечении которых указана стоимость передвижения между заданной парой точек. В качестве стоимости может быть использовано расстояние или время передвижения по улично-дорожной сети.</p>
+</blockquote>
+<p>Матрицы источник-назначение можно строить либо между точками одного слоя, либо между точками разных слоев. Для их построения необходим слой с улично-дорожной сетью, по которой будет осуществляться передвижение, и слой с точечными объектами (или два слоя), между которыми будет осуществляться передвижение.</p>
+<p>Матрицы источник-назначение могут быть созданы в виде линейных объектов, в виде таблицы или в виде csv файла.</p>
+<p>Рассмотрим построение матрицы источник-назначение между объектами одного точечного слоя. В качестве улично-дорожной сети возьмем слой с улицами из предыдущего раздела <a href="network.html#network-standart">13.1</a>, а в качестве точечных объектов расположение супермаркетов из <a href="basics.html#add-object">3.1</a>.</p>
+<p>Так как для расчета матрицы для каждой точки нужен уникальный идентификатор, сначала создадим в слое с расположением супермаркетов новое поле, в которое запишем порядковые номера объектов.</p>
+<p>Для этого нужно открыть таблицу атрибутов и запустить калькулятор полей, в котором создать новое поле и выбрать функцию <strong>$id</strong> в окне создания выражения. Эта функция возвращает порядковый номер объекта в слое.</p>
+<p><img src="images/243.PNG" /></p>
+<p>Далее запустим функцию <strong>OD Matrix from Points as Table (n:n)</strong>, в которой обязательными параметрами являются:</p>
+<ul>
+<li><p>слой с улично-дорожной сетью;</p></li>
+<li><p>слой с точечными объектами;</p></li>
+<li><p>поле с идентификатором точечных объектов;</p></li>
+<li><p>критерий оптимизации - кратчайшее расстояние или время.</p></li>
+</ul>
+<p>Все остальные характеристики являются дополнительными и фактически аналогичны стандартным функциям, рассмотренным в предыдущем разделе <a href="network.html#network-standart">13.1</a>.</p>
+<p><img src="images/244.PNG" /></p>
+<p>В результате расчета матрицы в виде таблицы будет получена только таблица атрибутов, в которой между всеми возможными парами точек будет рассчитано расстояние (или время) нужное на передвижение между этими точками.</p>
+<p><img src="images/245.PNG" /></p>
+<blockquote>
+<p>Следует отметить, что при расчете матриц источник-назначение определяется стоимость передвижения для всех пар точек, включая те, которые не попадают на улично-дорожную сеть (отсюда появляется стоимость входа и выхода к точкам).</p>
+</blockquote>
+<p>При построении матрицы источник-назначение в виде csv-файла результат будет аналогичный, и он будет сразу записан в формат csv, удобный для дальнейшей работы и анализа.</p>
+<p>В результате построения матрицы источник-назначение в виде линий будет получен новый линейный слой, соединяющий между собой все пары точек, каждой линии которого в качестве атрибутов будет прописано расстояние (или время) необходимые на передвижение между рассматриваемой парой.</p>
+<p>Здесь для упрощения расчетов была выделена только часть слоя с точечными объектами.</p>
+<div class="figure">
+<img src="images/246.PNG" alt="" />
+<p class="caption">Параметры расчета матрицы источник-назначение в виде линий</p>
+</div>
+<div class="figure">
+<img src="images/247.PNG" alt="" />
+<p class="caption">Матрица источник-назначение в виде линий на карте</p>
+</div>
+<div class="figure">
+<img src="images/248.PNG" alt="" />
+<p class="caption">Атрибутивная таблица матрицы источник-назначение в виде линий</p>
+</div>
+</div>
+<div id="построение-изохрон" class="section level3" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> Построение изохрон</h3>
+<p>Построение изохрон в плагине QNEAT3 возможно в нескольких вариациях от одной точки или от объектов точечного слоя:</p>
+<ul>
+<li><p>линии равного расстояния (равного времени);</p></li>
+<li><p>поверхность интерполяции времени или расстояния;</p></li>
+<li><p>облако точек с характеристиками времения или расстояния;</p></li>
+<li><p>полигональные объекты.</p></li>
+</ul>
+<p>Для корректной работы алгоритмов расчета изохрон в этом плагине рекомендуется применять только плоские прямоугольные системы координат (системы координат с единицами измерений в метрах), поэтому исходный слой улично-дорожной сети в нашем случае нужно перепроецировать в такую систему координат. Перепроецируем (см. <a href="spatial-basics.html#buffer">8.3</a> его в систему координат <code>EPSG: 32636</code>.</p>
+<p><img src="images/249.PNG" /></p>
+<p>Дальнейшие расчеты изохрон следует уже делать с использованием перепроецированного слоя улично-дорожной сети.</p>
+<p>Построение изохрон от одной точки и от объектов точечного слоя отличается только параметрами на входе и получаемым в результате количеством изохрон, поэтому далее будет рассмотрено построение изохрон от одной точки. Исходная точка может задаваться либо просто кликом на карте, либо ее можно задать по координатам.</p>
+<p>При построении изохрон в виде линий равного расстояния или времени нужно задать:</p>
+<ul>
+<li><p>слой улично-дорожной сети;</p></li>
+<li><p>стартовую точку;</p></li>
+<li><p>размер области, в пределах которой осуществляется расчет (расстояние или время в зависимости от критерия оптимизации);</p></li>
+<li><p>интервал между линиями;</p></li>
+<li><p>размер ячейки растра, получаемого в результате интерполяции;</p></li>
+<li><p>критерий оптимизации</p>
+<ul>
+<li><p>кратчайшее расстояние - оптимизация по расстоянию, в этом случае размер области и интервала задается в единицах измерения системы координат слоя;</p></li>
+<li><p>наиболее быстрый путь - оптимизация по времени, в этом случае размер области и интервал задается в секундах.</p></li>
+</ul></li>
+</ul>
+<p><img src="images/250.PNG" /></p>
+<p>Остальные параметры являются дополнительными и аналогичны рассмотренным выше.</p>
+<p>Результатом расчета в этом случае будет являться два новых слоя: растр с результатами интерполяции и слой с контурами равного расстояния или времени (в зависимости от выбранного критерия оптимизации).</p>
+<p><img src="images/251.PNG" /></p>
+<p>В центре полученного растра и контуров находится исходная точка.</p>
+<p>Результирующий растр показывает более сглаженные промежуточные значения, которые получаются на основе интерполяции значений между контурами.</p>
+<p>Такой же растр получается при расчета изохрон только в виде растровой поверхности (Iso-area as interpolation).</p>
+<p>Построение изохрон как облака точек по параметрам аналогично рассмотреному выше построению в виде линий равного времени или расстояния с небольшими исключениями: здесь указывается только общий размер области, а также можно выбрать метод расчета расстояния (по эллипсоиду или на плоскости).</p>
+<p><img src="images/252.PNG" /></p>
+<p>В результате получается слой, содержащий в себе все узлы улично-дорожной сети, каждому из которых присвоен атрибут расстояния (или времени в зависимости от параметра оптимизации).</p>
+<p><img src="images/253.PNG" /></p>
+<p>Построение изохрон в виде полигональных объектов аналогично построению изохрон в виде линий равного времени/расстояния, только в результате вами будут получены не линейные объекты, а площадные со значениями времени или расстояния (в зависимости от выбранного критерия оптимизации).</p>
+<p><img src="images/254.PNG" /></p>
+<p>В результате как и при построении изохрон в виде линий равного времени/расстояния получается два слоя: растровый слой с результатами интерполяции и векторный слой с полигональными объектами.</p>
+<p><img src="images/255.PNG" /></p>
+</div>
+<div id="расчет-кратчайшего-пути-между-точками" class="section level3" number="13.2.3">
+<h3><span class="header-section-number">13.2.3</span> Расчет кратчайшего пути между точками</h3>
+<p>Поиск кратчайшего расстояния с использованием плагина осуществляется только между двумя точками, которые можно указать на карте или задать по координатам.</p>
+<p><img src="images/256.PNG" /></p>
+<p>В результате будет получен векторный слой с линией, соединяющей заданные точки старта и финиша.</p>
+<p><img src="images/257.PNG" /></p>
+<p>Атрибутами этой линии будут являться характеристики перемещения между точками:</p>
+<ul>
+<li><p>начальная точка и ее координаты;</p></li>
+<li><p>конечная точка и ее координаты;</p></li>
+<li><p>стоимость перемещения (расстояние) между точками.</p></li>
+</ul>
+<p><img src="images/258.PNG" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vectorisation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="relief.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
