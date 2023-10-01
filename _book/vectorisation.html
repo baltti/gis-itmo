@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 12 Векторизация | Геоинформатика и геоинформационные системы</title>
-  <meta name="description" content=" 12 Векторизация | Геоинформатика и геоинформационные системы" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <title> 8 Векторизация | Геоинформатика и геоинформационные системы</title>
+  <meta name="description" content=" 8 Векторизация | Геоинформатика и геоинформационные системы" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 12 Векторизация | Геоинформатика и геоинформационные системы" />
+  <meta property="og:title" content=" 8 Векторизация | Геоинформатика и геоинформационные системы" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 12 Векторизация | Геоинформатика и геоинформационные системы" />
+  <meta name="twitter:title" content=" 8 Векторизация | Геоинформатика и геоинформационные системы" />
   
   
   
@@ -24,16 +23,15 @@
 <meta name="author" content="Балтыжакова Татьяна" />
 
 
-<meta name="date" content="2022-02-27" />
+<meta name="date" content="2023-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="datawrapper.html"/>
-<link rel="next" href="network.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<link rel="prev" href="georeferencing.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,11 +49,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -74,166 +77,65 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Общие сведения</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a>
+<li class="chapter" data-level="2" data-path="history.html"><a href="history.html"><i class="fa fa-check"></i><b>2</b> История развития геоинформационных систем</a></li>
+<li class="chapter" data-level="3" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>3</b> Обзор современных ГИС</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#наиболее-распространенные-гис"><i class="fa fa-check"></i><b>2.1</b> Наиболее распространенные ГИС</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>3</b> Начало работы</a>
+<li class="chapter" data-level="3.1" data-path="overview.html"><a href="overview.html#foreign"><i class="fa fa-check"></i><b>3.1</b> Зарубежные ГИС</a></li>
+<li class="chapter" data-level="3.2" data-path="overview.html"><a href="overview.html#russian"><i class="fa fa-check"></i><b>3.2</b> Российские альтернативы</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="basics.html"><a href="basics.html#add-object"><i class="fa fa-check"></i><b>3.1</b> Добавление объектов на карту</a></li>
-<li class="chapter" data-level="3.2" data-path="basics.html"><a href="basics.html#tiles"><i class="fa fa-check"></i><b>3.2</b> Добавление подложки</a></li>
-<li class="chapter" data-level="3.3" data-path="basics.html"><a href="basics.html#reproject-fly"><i class="fa fa-check"></i><b>3.3</b> Настройка карты</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="basics.html"><a href="basics.html#style-basics"><i class="fa fa-check"></i><b>3.3.1</b> Настройка стиля</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="basics.html"><a href="basics.html#layout"><i class="fa fa-check"></i><b>3.4</b> Оформление карты</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="basics.html"><a href="basics.html#создание-макета"><i class="fa fa-check"></i><b>3.4.1</b> Создание макета</a></li>
-<li class="chapter" data-level="3.4.2" data-path="basics.html"><a href="basics.html#настройка-макета"><i class="fa fa-check"></i><b>3.4.2</b> Настройка макета</a></li>
+<li class="chapter" data-level="3.2.1" data-path="overview.html"><a href="overview.html#гис-панорама"><i class="fa fa-check"></i><b>3.2.1</b> ГИС Панорама</a></li>
+<li class="chapter" data-level="3.2.2" data-path="overview.html"><a href="overview.html#гис-аксиома"><i class="fa fa-check"></i><b>3.2.2</b> ГИС Аксиома</a></li>
+<li class="chapter" data-level="3.2.3" data-path="overview.html"><a href="overview.html#zulugis"><i class="fa fa-check"></i><b>3.2.3</b> ZuluGis</a></li>
+<li class="chapter" data-level="3.2.4" data-path="overview.html"><a href="overview.html#гис-ингео"><i class="fa fa-check"></i><b>3.2.4</b> ГИС Ингео</a></li>
+<li class="chapter" data-level="3.2.5" data-path="overview.html"><a href="overview.html#гис-терра"><i class="fa fa-check"></i><b>3.2.5</b> ГИС Терра</a></li>
+<li class="chapter" data-level="3.2.6" data-path="overview.html"><a href="overview.html#urbancs01-intro-9"><i class="fa fa-check"></i><b>3.2.6</b> UrbanCS</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="crs.html"><a href="crs.html"><i class="fa fa-check"></i><b>4</b> Системы координат в ГИС</a>
+<li class="chapter" data-level="4" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>4</b> Форматы данных, используемые в ГИС</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="crs.html"><a href="crs.html#общие-сведения-о-картографических-проекциях"><i class="fa fa-check"></i><b>4.1</b> Общие сведения о картографических проекциях</a></li>
-<li class="chapter" data-level="4.2" data-path="crs.html"><a href="crs.html#системы-координат"><i class="fa fa-check"></i><b>4.2</b> Системы координат</a>
+<li class="chapter" data-level="4.1" data-path="formats.html"><a href="formats.html#vector"><i class="fa fa-check"></i><b>4.1</b> Векторные форматы данных</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="crs.html"><a href="crs.html#wkt"><i class="fa fa-check"></i><b>4.2.1</b> WKT</a></li>
-<li class="chapter" data-level="4.2.2" data-path="crs.html"><a href="crs.html#proj"><i class="fa fa-check"></i><b>4.2.2</b> proj</a></li>
+<li class="chapter" data-level="4.1.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>4.1.1</b> Shape файлы</a></li>
+<li class="chapter" data-level="4.1.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>4.1.2</b> Geojson</a></li>
+<li class="chapter" data-level="4.1.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>4.1.3</b> Geopackage</a></li>
+<li class="chapter" data-level="4.1.4" data-path="formats.html"><a href="formats.html#kml"><i class="fa fa-check"></i><b>4.1.4</b> KML</a></li>
+<li class="chapter" data-level="4.1.5" data-path="formats.html"><a href="formats.html#gpx"><i class="fa fa-check"></i><b>4.1.5</b> GPX</a></li>
+<li class="chapter" data-level="4.1.6" data-path="formats.html"><a href="formats.html#wkt"><i class="fa fa-check"></i><b>4.1.6</b> WKT</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="formats.html"><a href="formats.html"><i class="fa fa-check"></i><b>5</b> Форматы данных, используемые в ГИС</a>
+<li class="chapter" data-level="4.2" data-path="formats.html"><a href="formats.html#raster"><i class="fa fa-check"></i><b>4.2</b> Растровые форматы данных</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="formats.html"><a href="formats.html#shape-файлы"><i class="fa fa-check"></i><b>5.1</b> Shape файлы</a></li>
-<li class="chapter" data-level="5.2" data-path="formats.html"><a href="formats.html#geojson"><i class="fa fa-check"></i><b>5.2</b> Geojson</a></li>
-<li class="chapter" data-level="5.3" data-path="formats.html"><a href="formats.html#geopackage"><i class="fa fa-check"></i><b>5.3</b> Geopackage</a></li>
+<li class="chapter" data-level="4.2.1" data-path="formats.html"><a href="formats.html#geotiff"><i class="fa fa-check"></i><b>4.2.1</b> GeoTIFF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="formats.html"><a href="formats.html#tiles"><i class="fa fa-check"></i><b>4.3</b> Тайловые данные</a></li>
+<li class="chapter" data-level="4.4" data-path="formats.html"><a href="formats.html#проект-qgis"><i class="fa fa-check"></i><b>4.4</b> Проект QGIS</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="start.html"><a href="start.html"><i class="fa fa-check"></i><b>5</b> Старт работы</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="start.html"><a href="start.html#interface"><i class="fa fa-check"></i><b>5.1</b> Общие элементы интерфейса</a></li>
+<li class="chapter" data-level="5.2" data-path="start.html"><a href="start.html#basemap"><i class="fa fa-check"></i><b>5.2</b> Добавление подложки</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="start.html"><a href="start.html#QMS"><i class="fa fa-check"></i><b>5.2.1</b> Добавление подложки с помощью модуля QuickMapServices</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="osm.html"><a href="osm.html"><i class="fa fa-check"></i><b>6</b> Загрузка данных с OpenStreetMap</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#сервис-overpass-turbo"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+<li class="chapter" data-level="6.1" data-path="osm.html"><a href="osm.html#overpass"><i class="fa fa-check"></i><b>6.1</b> Сервис overpass-turbo</a></li>
+<li class="chapter" data-level="6.2" data-path="osm.html"><a href="osm.html#quickosm"><i class="fa fa-check"></i><b>6.2</b> Модуль QuickOSM</a></li>
+<li class="chapter" data-level="6.3" data-path="osm.html"><a href="osm.html#дополнительно"><i class="fa fa-check"></i><b>6.3</b> Дополнительно</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="styles-import.html"><a href="styles-import.html"><i class="fa fa-check"></i><b>7</b> Импорт готовых стилей</a></li>
-<li class="chapter" data-level="8" data-path="spatial-basics.html"><a href="spatial-basics.html"><i class="fa fa-check"></i><b>8</b> Базовые операции пространственного анализа</a>
+<li class="chapter" data-level="7" data-path="georeferencing.html"><a href="georeferencing.html"><i class="fa fa-check"></i><b>7</b> Геопривязка растра</a></li>
+<li class="chapter" data-level="8" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>8</b> Векторизация</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="spatial-basics.html"><a href="spatial-basics.html#фильтрация-данных"><i class="fa fa-check"></i><b>8.1</b> Фильтрация данных</a></li>
-<li class="chapter" data-level="8.2" data-path="spatial-basics.html"><a href="spatial-basics.html#определение-площадей-периметра-и-длин-линий"><i class="fa fa-check"></i><b>8.2</b> Определение площадей, периметра и длин линий</a>
+<li class="chapter" data-level="8.1" data-path="vectorisation.html"><a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов"><i class="fa fa-check"></i><b>8.1</b> Создание нового слоя и добавление в него объектов</a></li>
+<li class="chapter" data-level="8.2" data-path="vectorisation.html"><a href="vectorisation.html#прилипание-объектов"><i class="fa fa-check"></i><b>8.2</b> Прилипание объектов</a></li>
+<li class="chapter" data-level="8.3" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-объектов"><i class="fa fa-check"></i><b>8.3</b> Редактирование объектов</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="spatial-basics.html"><a href="spatial-basics.html#добавление-атрибутов-геометрии"><i class="fa fa-check"></i><b>8.2.1</b> Добавление атрибутов геометрии</a></li>
-<li class="chapter" data-level="8.2.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-через-калькулятор-полей"><i class="fa fa-check"></i><b>8.2.2</b> Расчет через калькулятор полей</a></li>
+<li class="chapter" data-level="8.3.1" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-формы-объектов"><i class="fa fa-check"></i><b>8.3.1</b> Редактирование формы объектов</a></li>
+<li class="chapter" data-level="8.3.2" data-path="vectorisation.html"><a href="vectorisation.html#перемещение-объекта"><i class="fa fa-check"></i><b>8.3.2</b> Перемещение объекта</a></li>
+<li class="chapter" data-level="8.3.3" data-path="vectorisation.html"><a href="vectorisation.html#поворот-объекта"><i class="fa fa-check"></i><b>8.3.3</b> Поворот объекта</a></li>
+<li class="chapter" data-level="8.3.4" data-path="vectorisation.html"><a href="vectorisation.html#разбивка-объекта"><i class="fa fa-check"></i><b>8.3.4</b> Разбивка объекта</a></li>
+<li class="chapter" data-level="8.3.5" data-path="vectorisation.html"><a href="vectorisation.html#преобразование-объекта-в-кольцо"><i class="fa fa-check"></i><b>8.3.5</b> Преобразование объекта в кольцо</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="spatial-basics.html"><a href="spatial-basics.html#buffer"><i class="fa fa-check"></i><b>8.3</b> Буферные зоны</a></li>
-<li class="chapter" data-level="8.4" data-path="spatial-basics.html"><a href="spatial-basics.html#поиск-объектов-попадающих-в-радиус-обслуживания"><i class="fa fa-check"></i><b>8.4</b> Поиск объектов, попадающих в радиус обслуживания</a></li>
-<li class="chapter" data-level="8.5" data-path="spatial-basics.html"><a href="spatial-basics.html#оверлейные-операции"><i class="fa fa-check"></i><b>8.5</b> Оверлейные операции</a></li>
-<li class="chapter" data-level="8.6" data-path="spatial-basics.html"><a href="spatial-basics.html#пространственное-объединение"><i class="fa fa-check"></i><b>8.6</b> Пространственное объединение</a></li>
-<li class="chapter" data-level="8.7" data-path="spatial-basics.html"><a href="spatial-basics.html#агрегирование-объектов"><i class="fa fa-check"></i><b>8.7</b> Агрегирование объектов</a>
-<ul>
-<li class="chapter" data-level="8.7.1" data-path="spatial-basics.html"><a href="spatial-basics.html#grid"><i class="fa fa-check"></i><b>8.7.1</b> Построение сетки</a></li>
-<li class="chapter" data-level="8.7.2" data-path="spatial-basics.html"><a href="spatial-basics.html#расчет-плотности-объектов"><i class="fa fa-check"></i><b>8.7.2</b> Расчет плотности объектов</a></li>
-<li class="chapter" data-level="8.7.3" data-path="spatial-basics.html"><a href="spatial-basics.html#настройка-стиля-объектов-в-зависимости-от-количественной-переменной"><i class="fa fa-check"></i><b>8.7.3</b> Настройка стиля объектов в зависимости от количественной переменной</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="visualisation.html"><a href="visualisation.html"><i class="fa fa-check"></i><b>9</b> Методы представления географических данных</a>
-<ul>
-<li class="chapter" data-level="9.0.1" data-path="visualisation.html"><a href="visualisation.html#основные-принципы-визуализации-про-которые-стоит-помнить"><i class="fa fa-check"></i><b>9.0.1</b> Основные принципы визуализации, про которые стоит помнить</a></li>
-<li class="chapter" data-level="9.1" data-path="visualisation.html"><a href="visualisation.html#пропорциональные-символы-bubble-map"><i class="fa fa-check"></i><b>9.1</b> Пропорциональные символы (bubble map)</a></li>
-<li class="chapter" data-level="9.2" data-path="visualisation.html"><a href="visualisation.html#карта-плотности-точек-dot-density"><i class="fa fa-check"></i><b>9.2</b> Карта плотности точек (dot density)</a></li>
-<li class="chapter" data-level="9.3" data-path="visualisation.html"><a href="visualisation.html#картограмма-choropleth"><i class="fa fa-check"></i><b>9.3</b> Картограмма (choropleth)</a></li>
-<li class="chapter" data-level="9.4" data-path="visualisation.html"><a href="visualisation.html#анаморфная-карта-cartogram"><i class="fa fa-check"></i><b>9.4</b> Анаморфная карта (cartogram)</a></li>
-<li class="chapter" data-level="9.5" data-path="visualisation.html"><a href="visualisation.html#плиточные-карты-2d-histogram-map-grid"><i class="fa fa-check"></i><b>9.5</b> Плиточные карты (<strong>2d histogram map, grid)</strong></a></li>
-<li class="chapter" data-level="9.6" data-path="visualisation.html"><a href="visualisation.html#карты-равных-значений-isopleth-maps"><i class="fa fa-check"></i><b>9.6</b> Карты равных значений (isopleth maps)</a></li>
-<li class="chapter" data-level="9.7" data-path="visualisation.html"><a href="visualisation.html#карта-потоков-flow-map"><i class="fa fa-check"></i><b>9.7</b> Карта потоков (flow map)</a></li>
-<li class="chapter" data-level="9.8" data-path="visualisation.html"><a href="visualisation.html#d-карты"><i class="fa fa-check"></i><b>9.8</b> 3D карты</a></li>
-<li class="chapter" data-level="9.9" data-path="visualisation.html"><a href="visualisation.html#bivariate-maps"><i class="fa fa-check"></i><b>9.9</b> Bivariate maps</a></li>
-<li class="chapter" data-level="9.10" data-path="visualisation.html"><a href="visualisation.html#еще-несколько-нестандартных-подходов"><i class="fa fa-check"></i><b>9.10</b> Еще несколько нестандартных подходов</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html"><i class="fa fa-check"></i><b>10</b> Создание различных типов карт в QGIS</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#исходные-данные"><i class="fa fa-check"></i><b>10.1</b> Исходные данные</a></li>
-<li class="chapter" data-level="10.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#пропорциональные-символы-bubble-map-1"><i class="fa fa-check"></i><b>10.2</b> Пропорциональные символы (bubble map)</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-1-через-дополнительный-слой-знака"><i class="fa fa-check"></i><b>10.2.1</b> Способ 1 (через дополнительный слой знака)</a></li>
-<li class="chapter" data-level="10.2.2" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#способ-2-через-круговую-диаграмму"><i class="fa fa-check"></i><b>10.2.2</b> Способ 2 (через круговую диаграмму)</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#картограмма-choropleth-1"><i class="fa fa-check"></i><b>10.3</b> Картограмма (choropleth)</a></li>
-<li class="chapter" data-level="10.4" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-плотности-точек-dot-density-1"><i class="fa fa-check"></i><b>10.4</b> Карта плотности точек (dot density)</a></li>
-<li class="chapter" data-level="10.5" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#анаморфная-карта-cartogram-1"><i class="fa fa-check"></i><b>10.5</b> Анаморфная карта (cartogram)</a></li>
-<li class="chapter" data-level="10.6" data-path="visualisation-qgis.html"><a href="visualisation-qgis.html#карта-с-одновременным-отображением-двух-переменных-bivariate-map"><i class="fa fa-check"></i><b>10.6</b> Карта с одновременным отображением двух переменных (bivariate map)</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="datawrapper.html"><a href="datawrapper.html"><i class="fa fa-check"></i><b>11</b> Создание карт с помощью сервиса Datawrapper</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="datawrapper.html"><a href="datawrapper.html#choropleth-datawrapper"><i class="fa fa-check"></i><b>11.1</b> Картограмма (choropleth)</a></li>
-<li class="chapter" data-level="11.2" data-path="datawrapper.html"><a href="datawrapper.html#плиточная-карта"><i class="fa fa-check"></i><b>11.2</b> Плиточная карта</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>12</b> Векторизация</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="vectorisation.html"><a href="vectorisation.html#геопривязка-растра"><i class="fa fa-check"></i><b>12.1</b> Геопривязка растра</a></li>
-<li class="chapter" data-level="12.2" data-path="vectorisation.html"><a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов"><i class="fa fa-check"></i><b>12.2</b> Создание нового слоя и добавление в него объектов</a></li>
-<li class="chapter" data-level="12.3" data-path="vectorisation.html"><a href="vectorisation.html#прилипание-объектов"><i class="fa fa-check"></i><b>12.3</b> Прилипание объектов</a></li>
-<li class="chapter" data-level="12.4" data-path="vectorisation.html"><a href="vectorisation.html#редактирование-объектов"><i class="fa fa-check"></i><b>12.4</b> Редактирование объектов</a>
-<ul>
-<li class="chapter" data-level="12.4.1" data-path="vectorisation.html"><a href="vectorisation.html#перемещение-объекта"><i class="fa fa-check"></i><b>12.4.1</b> Перемещение объекта</a></li>
-<li class="chapter" data-level="12.4.2" data-path="vectorisation.html"><a href="vectorisation.html#поворот-объекта"><i class="fa fa-check"></i><b>12.4.2</b> Поворот объекта</a></li>
-<li class="chapter" data-level="12.4.3" data-path="vectorisation.html"><a href="vectorisation.html#преобразование-объекта-в-кольцо"><i class="fa fa-check"></i><b>12.4.3</b> Преобразование объекта в кольцо</a></li>
-<li class="chapter" data-level="12.4.4" data-path="vectorisation.html"><a href="vectorisation.html#разбивка-объекта"><i class="fa fa-check"></i><b>12.4.4</b> Разбивка объекта</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>13</b> Сетевой анализ</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="network.html"><a href="network.html#network-standart"><i class="fa fa-check"></i><b>13.1</b> Сетевой анализ стандартными средствами QGIS</a>
-<ul>
-<li class="chapter" data-level="13.1.1" data-path="network.html"><a href="network.html#область-обслуживания"><i class="fa fa-check"></i><b>13.1.1</b> Область обслуживания</a></li>
-<li class="chapter" data-level="13.1.2" data-path="network.html"><a href="network.html#поиск-кратчайшего-пути"><i class="fa fa-check"></i><b>13.1.2</b> Поиск кратчайшего пути</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="network.html"><a href="network.html#сетевой-анализ-с-помощью-плагина-qneat3"><i class="fa fa-check"></i><b>13.2</b> Сетевой анализ с помощью плагина QNEAT3</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="network.html"><a href="network.html#матрицы-источник-назначение"><i class="fa fa-check"></i><b>13.2.1</b> Матрицы источник-назначение</a></li>
-<li class="chapter" data-level="13.2.2" data-path="network.html"><a href="network.html#построение-изохрон"><i class="fa fa-check"></i><b>13.2.2</b> Построение изохрон</a></li>
-<li class="chapter" data-level="13.2.3" data-path="network.html"><a href="network.html#расчет-кратчайшего-пути-между-точками"><i class="fa fa-check"></i><b>13.2.3</b> Расчет кратчайшего пути между точками</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="relief.html"><a href="relief.html"><i class="fa fa-check"></i><b>14</b> Построение рельефа</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="relief.html"><a href="relief.html#добавление-цифровой-модели-рельефа"><i class="fa fa-check"></i><b>14.1</b> Добавление цифровой модели рельефа</a></li>
-<li class="chapter" data-level="14.2" data-path="relief.html"><a href="relief.html#теневой-рельефrelief-1"><i class="fa fa-check"></i><b>14.2</b> Теневой рельеф</a></li>
-<li class="chapter" data-level="14.3" data-path="relief.html"><a href="relief.html#крутизна-склоновrelief-3"><i class="fa fa-check"></i><b>14.3</b> Крутизна склонов</a></li>
-<li class="chapter" data-level="14.4" data-path="relief.html"><a href="relief.html#экспозиция-склоновrelief-4"><i class="fa fa-check"></i><b>14.4</b> Экспозиция склонов</a></li>
-<li class="chapter" data-level="14.5" data-path="relief.html"><a href="relief.html#расчет-неоднородности-рельефаrelief-5"><i class="fa fa-check"></i><b>14.5</b> Расчет неоднородности рельефа</a></li>
-<li class="chapter" data-level="14.6" data-path="relief.html"><a href="relief.html#построение-трехмерной-поверхности"><i class="fa fa-check"></i><b>14.6</b> Построение трехмерной поверхности</a></li>
-<li class="chapter" data-level="14.7" data-path="relief.html"><a href="relief.html#создание-горизонталей"><i class="fa fa-check"></i><b>14.7</b> Создание горизонталей</a></li>
-<li class="chapter" data-level="14.8" data-path="relief.html"><a href="relief.html#построение-профиля-местности"><i class="fa fa-check"></i><b>14.8</b> Построение профиля местности</a>
-<ul>
-<li class="chapter" data-level="14.8.1" data-path="relief.html"><a href="relief.html#плагин-profiletool"><i class="fa fa-check"></i><b>14.8.1</b> Плагин ProfileTool</a></li>
-<li class="chapter" data-level="14.8.2" data-path="relief.html"><a href="relief.html#средствами-панели-инструментов"><i class="fa fa-check"></i><b>14.8.2</b> Средствами панели инструментов</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="exam.html"><a href="exam.html"><i class="fa fa-check"></i><b>15</b> Примеры заданий для зачета</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="exam.html"><a href="exam.html#задание-1"><i class="fa fa-check"></i><b>15.1</b> Задание 1</a>
-<ul>
-<li class="chapter" data-level="15.1.1" data-path="exam.html"><a href="exam.html#вариант-1"><i class="fa fa-check"></i><b>15.1.1</b> Вариант 1</a></li>
-<li class="chapter" data-level="15.1.2" data-path="exam.html"><a href="exam.html#вариант-2"><i class="fa fa-check"></i><b>15.1.2</b> Вариант 2</a></li>
-<li class="chapter" data-level="15.1.3" data-path="exam.html"><a href="exam.html#вариант-3"><i class="fa fa-check"></i><b>15.1.3</b> Вариант 3</a></li>
-<li class="chapter" data-level="15.1.4" data-path="exam.html"><a href="exam.html#вариант-4"><i class="fa fa-check"></i><b>15.1.4</b> Вариант 4</a></li>
-<li class="chapter" data-level="15.1.5" data-path="exam.html"><a href="exam.html#вариант-5"><i class="fa fa-check"></i><b>15.1.5</b> Вариант 5</a></li>
-<li class="chapter" data-level="15.1.6" data-path="exam.html"><a href="exam.html#вариант-6"><i class="fa fa-check"></i><b>15.1.6</b> Вариант 6</a></li>
-</ul></li>
-<li class="chapter" data-level="15.2" data-path="exam.html"><a href="exam.html#задание-2"><i class="fa fa-check"></i><b>15.2</b> Задание 2</a></li>
-<li class="chapter" data-level="15.3" data-path="exam.html"><a href="exam.html#задание-3"><i class="fa fa-check"></i><b>15.3</b> Задание 3</a>
-<ul>
-<li class="chapter" data-level="15.3.1" data-path="exam.html"><a href="exam.html#вариант-1-1"><i class="fa fa-check"></i><b>15.3.1</b> Вариант 1</a></li>
-<li class="chapter" data-level="15.3.2" data-path="exam.html"><a href="exam.html#вариант-2-1"><i class="fa fa-check"></i><b>15.3.2</b> Вариант 2</a></li>
-<li class="chapter" data-level="15.3.3" data-path="exam.html"><a href="exam.html#вариант-3-1"><i class="fa fa-check"></i><b>15.3.3</b> Вариант 3</a></li>
-</ul></li>
-<li class="chapter" data-level="15.4" data-path="exam.html"><a href="exam.html#задание-4"><i class="fa fa-check"></i><b>15.4</b> Задание 4</a>
-<ul>
-<li class="chapter" data-level="15.4.1" data-path="exam.html"><a href="exam.html#вариант-1-2"><i class="fa fa-check"></i><b>15.4.1</b> Вариант 1</a></li>
-<li class="chapter" data-level="15.4.2" data-path="exam.html"><a href="exam.html#вариант-2-2"><i class="fa fa-check"></i><b>15.4.2</b> Вариант 2</a></li>
-<li class="chapter" data-level="15.4.3" data-path="exam.html"><a href="exam.html#вариант-3-2"><i class="fa fa-check"></i><b>15.4.3</b> Вариант 3</a></li>
-<li class="chapter" data-level="15.4.4" data-path="exam.html"><a href="exam.html#вариант-4-1"><i class="fa fa-check"></i><b>15.4.4</b> Вариант 4</a></li>
-<li class="chapter" data-level="15.4.5" data-path="exam.html"><a href="exam.html#вариант-5-1"><i class="fa fa-check"></i><b>15.4.5</b> Вариант 5</a></li>
-<li class="chapter" data-level="15.4.6" data-path="exam.html"><a href="exam.html#вариант-6-1"><i class="fa fa-check"></i><b>15.4.6</b> Вариант 6</a></li>
-</ul></li>
-<li class="chapter" data-level="15.5" data-path="exam.html"><a href="exam.html#задание-5"><i class="fa fa-check"></i><b>15.5</b> Задание 5</a></li>
-<li class="chapter" data-level="15.6" data-path="exam.html"><a href="exam.html#задание-6"><i class="fa fa-check"></i><b>15.6</b> Задание 6</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -255,61 +157,20 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vectorisation" class="section level1" number="12">
-<h1><span class="header-section-number"> 12</span> Векторизация</h1>
+<div id="vectorisation" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number"> 8</span> Векторизация<a href="vectorisation.html#vectorisation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>Векторизация</strong> - процесс получения векторных географических данных. Как правило, имеется ввиду процесс получения на основе исходных растровых данных (сканированные карты, информация по официальным запросам, градостроительная документация и прочее).</p>
-<div id="геопривязка-растра" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Геопривязка растра</h2>
-<p>В качестве исходной информации при векторизации, как правило, выступают растровые изображения. Это могут быть отсканированные оригиналы бумажных карт, выдержки из официальной документации, информация с градостроительных порталов, из градостроительной документации, спутниковые снимки или снимки, полученные с беспилотных летательных аппаратов, даже просто скриншоты экрана, а также тайловые подложки (типа той, что мы подгружаем из OpenStreetMap).</p>
-<p><strong>Геопривязка растра</strong> - это присвоение растровому изображению нужной географической системы координат.</p>
-<p>В процессе привязки на растровом изображении для каждого пикселя, у которого есть условные координаты на растре, находится соотвествующая координата в целевой системе координат.</p>
-<p>В качестве исходных данных возьмем информацию с Градостроительного портала Санкт-Петербурга <a href="https://portal.kgainfo.spb.ru/KGAMap/Map" class="uri">https://portal.kgainfo.spb.ru/KGAMap/Map</a></p>
-<p><img src="images/161.PNG" /></p>
-<p>Этот портал позволяет получать информацию из градостроительной документации Санкт-Петербурга, но только в растровом виде, выгрузки границ объектов в векторных форматах здесь не предусмотрено. Поэтому, если вы хотите воспользоваться данными портала, вам нужно будет из самостоятельно векторизовать.</p>
-<p>Рассмотрим пример сохранения растровой картинки с границами функциональной зоны.</p>
-<p>Для этого найдем на карте интересующую нас зону, щелкнем на нее, чтобы получить информацию об объектах в точке.</p>
-<p><img src="images/162.png" /></p>
-<p>Далее выберем фунцию печати информации об функциональной зоне, после чего в новой вкладке откроется отчет с подробной информацией и схемой расположения объекта.</p>
-<p>Просто сохраним картинку из отчета, чтобы в дальнейшем открыть ее в QGIS, выполнить геопривязку и осуществить векторизацию.</p>
-<p>Создадим новый проект (рекомендую либо сразу его создавать в системе координат <code>EPSG:3857</code>, либо сразу после создания перепроецировать на лету в эту систему координат).</p>
-<p>Для геопривязки растровых изображений в QGIS существует встроенный инструмент <a href="https://docs.qgis.org/3.22/en/docs/user_manual/working_with_raster/georeferencer.html"><strong>Georeferencer</strong></a> (может называться Геопривязка).</p>
-<p><img src="images/163.png" /></p>
-<p>Далее откроется окно геопривязки растра.</p>
-<p><img src="images/164.PNG" /></p>
-<p>В первую очередь нужно задать или проверить параметры трансформации растра (в строке меню <em>Параметры — Параметры трансформации</em>).</p>
-<p><img src="images/165.PNG" /></p>
-<p>Основные параметры здесь:</p>
-<ul>
-<li><p>тип трансформации - алгоритм преобразования растрового изображения, подробнее <a href="https://docs.qgis.org/3.22/en/docs/user_manual/working_with_raster/georeferencer.html?#available-transformation-algorithms">здесь</a>;</p></li>
-<li><p>метод интерполяции;</p></li>
-<li><p>целевая система координат - система координат, которую вы хотите присвоить растру;</p></li>
-<li><p>целевой растр - нужно указать путь и название файла, полученного в результате привязки.</p></li>
-</ul>
-<p>Для выполнения привязки нужно открыть растр <img src="images/166.PNG" />, указать контрольные точки и их координаты в целевой системе координат.</p>
-<p><img src="images/167.PNG" /></p>
-<p>Контрольные точки - это точки, по которым будет осуществляться привязка растрового изображения. У этих точек известны координаты на растровом изображении (как правило, в пикселях) и в целевой системе координат, то есть фактически по этим точкам растр “усаживается” в нужное место на карту.</p>
-<p>Чтобы поставить контрольную точку, нужно щелкнуть на нее в окне привзяки на растре, а далее указать ее координаты в диалоговом окне.</p>
-<p><img src="images/168.PNG" /></p>
-<p>Координаты можно ввести с клавиатуры (если они у вас есть), либо выбрать вариант <strong>С карты</strong> и просто щеклнуть на ту же самую точку на карте, после чего эти координаты пропишутся в диалоговом окне автоматически.</p>
-<p>В качестве контрольных точек лучше всего использовать какие-то жесткие контура, на которых вы однозначно можете указать конкретную точку: угол дома, перекресток, угол парка и что-нибудь подобное.</p>
-<p>Для различных вариантов трансформации рекомендуется разное минимальное число контрольных точек, но, как правило, общая рекомендация использовать не менее 3 точек. Желательно, чтобы эти точки не были расположены на одной линии.</p>
-<p>После того, как вы укажете все контрольные точки и их координаты на карте, они будут отображены в таблице под растровым изображением в окне привязки.</p>
-<p><img src="images/169.PNG" /></p>
-<p>Контрольные точки привязки можно сохранить и потом использовать в дальнейшем в других проектах (но только для того же самого растра).</p>
-<p>Для завершения процесса привязки нужно нажать <strong>Начать привязку растра</strong> <img src="images/170.PNG" /> после чего растр будет модифицирован и отобразиться в нужном месте на карте.</p>
-<p><img src="images/171.PNG" /></p>
-<p>Этот модифицированный растр уже будет иметь в себе сведения о системе координат и его местоположении, поэтому его потом можно будет использовать в дальнейших проектах уже без процесса привязки.</p>
-</div>
-<div id="создание-нового-слоя-и-добавление-в-него-объектов" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Создание нового слоя и добавление в него объектов</h2>
+<div id="создание-нового-слоя-и-добавление-в-него-объектов" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Создание нового слоя и добавление в него объектов<a href="vectorisation.html#создание-нового-слоя-и-добавление-в-него-объектов" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Во всех предыдущих заданиях мы использовали уже готовые слои, которые просто добавляли в проект, но мы можем создавать и отрисовывать слои самостоятельно.</p>
 <p>Для того, чтобы создать новый векторный слой в строке меню нужно выбрать <strong>Файл - Создать слой - Создать новый Geopackage слой</strong>.</p>
-<p><img src="images/172.png" /></p>
+<p><img src="images/48.png" /></p>
 <p>После этого появится окно, в котором нужно задать имя файла, тип геометрии, систему координат, а также структуру таблицы атрибутов.</p>
-<p><img src="images/173.PNG" /></p>
+<p><img src="images/49.PNG" /></p>
 <p>В качестве примера рассмотрим отрисовку домов, в атрибутивной таблице будут два поля: адрес и количество проживающих.</p>
-<p><img src="images/174.PNG" /></p>
+<p><img src="images/50.PNG" /></p>
 <blockquote>
+<p>На этом этапе вы можете не создавать конкретную структуру таблицы атрибутов, так как вы всегда можете ее отредактировать позднее. По умолчанию будет создано 1 поле <strong>fid</strong>, которое будет заполнено автоматически номерами объектов.</p>
 <p>Рекомендую все файлы и названия полей делать латиницей, потому что QGIS может не всегда корректно работать с данными, путь к которым прописан русскими буквами, а также с русскими названиями полей.</p>
 <p>Также следует помнить, что названия файлов и слоев, а также названия полей в атрибутивной таблице лучше делать осмысленными, чтобы вы потом могли понять, что содержится в ваших данных.</p>
 </blockquote>
@@ -318,36 +179,40 @@
 </blockquote>
 <p>После того, как вы создадите слой, то он появится у вас в списке слоев, но, конечно, никаких объектов на карту не добавится, потому что они пока не отрисованы.</p>
 <p>Для начала отрисовки объектов в слое необходимо включить режим редактирования.</p>
-<p><img src="images/175.png" /></p>
-<p>После включения режима редактирования на панели инструментов станут активными кнопки создания объектов и редактирования вершин <img src="images/176.PNG" /> (так как у нас слой с площадными объектами, то предлагается только создания полигонов и их редактирование, если бы был другой тип геометрии инструменты были бы немного другими).</p>
+<p><img src="images/51.png" /></p>
+<p>После включения режима редактирования на панели инструментов станут активными кнопки создания объектов и редактирования вершин <img src="images/52.PNG" /> (так как у нас слой с площадными объектами, то предлагается только создания полигонов и их редактирование, если бы был другой тип геометрии инструменты были бы немного другими).</p>
 <p>Для начала отрисовки объекта нужно щелкнуть на первую точку полигона, а потом по всем поворотным, завершается отрисовка контура щелчком правой кнопкой мыши.</p>
 <p><img src="images/2021-12-01-12-46-06.gif" /></p>
 <p>По умолчанию в программе стоит настройка открывать окно ввода атрибутов для каждого созданного объекта.</p>
-<p><img src="images/177.PNG" /></p>
+<p><img src="images/53.PNG" /></p>
 <p>В этом окне можно ввести характеристики объектов сразу, либо оставить пустым, просто нажав кнопку ОК (если вы здесь нажмете кнопку Отмена, то объект не будет создан).</p>
 <p>Автоматическое появление формы ввода можно отключить в настройках программы.</p>
-<p><img src="images/178.PNG" /></p>
+<p><img src="images/54.PNG" /></p>
 </div>
-<div id="прилипание-объектов" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> Прилипание объектов</h2>
+<div id="прилипание-объектов" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Прилипание объектов<a href="vectorisation.html#прилипание-объектов" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>При отрисовке некоторых объектов важно, чтобы между ними были общие точки, общие границы, не было наложений или наоборот дырок между объектами. Для того, чтобы соблюдать эти правила, нужно пользоваться инструментами прилипания.</p>
-<p><img src="images/179.png" /></p>
+<p><img src="images/55.png" /></p>
 <p>На панели инструментов прилипания доступны следующие функции (слева направо)</p>
-<p><img src="images/180.PNG" /></p>
+<p><img src="images/56.PNG" /></p>
 <ul>
 <li><p>разрешить прилипание;</p></li>
 <li><p>выбор слоев, для которых будет доступно прилипание: все слои - прилипание будет осуществляться с учетом объектов всех слоев, которые есть в проекте (даже невидимых в данный момент), активный слой - прилипание будет осуществляться только для объектов текущего слоя.</p></li>
 </ul>
-<p><img src="images/181.png" /></p>
+<p><img src="images/58.png" /></p>
 <ul>
-<li><p>тип объектов, к которым осуществляется прилипание (может быть выбрано сразу несколько вариантов) <img src="images/182.png" /></p>
+<li><p>тип объектов, к которым осуществляется прилипание (может быть выбрано сразу несколько вариантов):</p>
 <ul>
-<li><p>вершина - прилипание только к узловым точкам;</p></li>
-<li><p>сегмент - прилипание к любой точке линии;</p></li>
-<li><p>площадь - прилипание к любой точке внутри полигона;</p></li>
-<li><p>центроид - прилипание к геометрическому центру полигона;</p></li>
-<li><p>центр сегментов - прилипание только к середине линии.</p></li>
+<li><p>к вершинам - прилипание только к узловым точкам;</p></li>
+<li><p>к линиям - прилипание к любой точке линии;</p></li>
+<li><p>к поверхности - прилипание к любой точке внутри полигона;</p></li>
+<li><p>к центроиду - прилипание к геометрическому центру полигона;</p></li>
+<li><p>середина отрезка - прилипание только к середине линии;</p></li>
+<li><p>конечные точки линии - прилипание только к начальной или конечной точке линии.</p></li>
 </ul></li>
+</ul>
+<p><img src="images/59.png" /></p>
+<ul>
 <li><p>порог прилипания - то есть, в какой области вокруг курсора будет искаться объект для прилипания;</p></li>
 <li><p>топологическое редактирование позволяет сохранять общие границы между объектами. Если эта опция включена, то программа будет автоматически перестраивать общую границу для двух объектов (если таковая граница есть);</p></li>
 <li><p>допустимы ли наложения между объектами <img src="images/183.png" /></p></li>
@@ -357,38 +222,75 @@
 </ul>
 <p><img src="images/2021-12-01-13-20-37.gif" /></p>
 </div>
-<div id="редактирование-объектов" class="section level2" number="12.4">
-<h2><span class="header-section-number">12.4</span> Редактирование объектов</h2>
-<p>Для редактирования формы объектов следует пользоваться инструментом работы с вершинами <img src="images/184.PNG" /></p>
+<div id="редактирование-объектов" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Редактирование объектов<a href="vectorisation.html#редактирование-объектов" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="редактирование-формы-объектов" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Редактирование формы объектов<a href="vectorisation.html#редактирование-формы-объектов" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Для редактирования формы объектов следует пользоваться инструментом работы с вершинами <img src="images/60.PNG" /></p>
 <p><img src="images/2021-12-01-13-25-36.gif" /></p>
-<p>Также для редактирования объектов есть целый ряд функций, представленных в пункте <strong>Правка</strong> строки меню.</p>
-<p><img src="images/185.png" /></p>
-<div id="перемещение-объекта" class="section level3" number="12.4.1">
-<h3><span class="header-section-number">12.4.1</span> Перемещение объекта</h3>
-<p><img src="images/2021-12-01-13-34-34.gif" /></p>
+<p>Также для редактирования объектов есть целый ряд функций, представленных в пункте <strong>Правка</strong> — <strong>Редактировать геометрию</strong> строки меню.</p>
+<p><img src="images/61.png" /></p>
 </div>
-<div id="поворот-объекта" class="section level3" number="12.4.2">
-<h3><span class="header-section-number">12.4.2</span> Поворот объекта</h3>
-<p><img src="images/2021-12-01-13-34-57.gif" /></p>
+<div id="перемещение-объекта" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Перемещение объекта<a href="vectorisation.html#перемещение-объекта" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/62.gif" /></p>
 </div>
-<div id="преобразование-объекта-в-кольцо" class="section level3" number="12.4.3">
-<h3><span class="header-section-number">12.4.3</span> Преобразование объекта в кольцо</h3>
-<p><img src="images/2021-12-01-13-35-24.gif" /></p>
+<div id="поворот-объекта" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Поворот объекта<a href="vectorisation.html#поворот-объекта" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/63.gif" /></p>
 </div>
-<div id="разбивка-объекта" class="section level3" number="12.4.4">
-<h3><span class="header-section-number">12.4.4</span> Разбивка объекта</h3>
-<p><img src="images/2021-12-01-13-35-52.gif" /></p>
+<div id="разбивка-объекта" class="section level3 hasAnchor" number="8.3.4">
+<h3><span class="header-section-number">8.3.4</span> Разбивка объекта<a href="vectorisation.html#разбивка-объекта" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/64.gif" /></p>
+</div>
+<div id="преобразование-объекта-в-кольцо" class="section level3 hasAnchor" number="8.3.5">
+<h3><span class="header-section-number">8.3.5</span> Преобразование объекта в кольцо<a href="vectorisation.html#преобразование-объекта-в-кольцо" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/65.gif" /></p>
+<blockquote>
+<p>Более подробно с функциями редактирования векторных объектов можно ознакомиться в документации по <a href="https://docs.qgis.org/3.28/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#advanced-digitizing">ссылке</a></p>
+</blockquote>
 
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="network.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="georeferencing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

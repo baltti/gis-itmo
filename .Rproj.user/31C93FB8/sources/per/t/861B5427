@@ -1,0 +1,31 @@
+{
+    "id": "861B5427",
+    "path": "C:/Users/baltt/Desktop/geoinformatics-2.0/06-vectorisation.Rmd",
+    "project_path": "06-vectorisation.Rmd",
+    "type": "r_markdown",
+    "hash": "3414115359",
+    "contents": "",
+    "dirty": false,
+    "created": 1696164750414.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "120,0",
+        "scrollLine": "89",
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "0",
+        "rmdVisualModeLocation": "5051:12264",
+        "rmdVisualCollapsedChunks": ""
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1696168177,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1696168177426,
+    "read_only": false,
+    "read_only_alternatives": []
+}
